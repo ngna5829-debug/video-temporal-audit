@@ -9,3 +9,6 @@ Ubuntu 24.04.5 的实际 CI 暴露一个依赖运行时问题：`imageio-ffmpeg=
 这是一项有同输入实验支持的兼容处理，尚未通过原生调用栈或模块跟踪确认崩溃内部机制，也不保证覆盖所有容器、编解码器或 Linux 发行版。`GCONV_PATH` 会改变字符转换配置的查找方式，服务名等文字元数据的字符转换可能不同；本工具只对视频画面与时间轴作分析。GNU/Linux 文档说明，设置此变量会绕过 gconv 配置缓存，但仍可能搜索系统默认配置，因此不能把它描述为“禁止所有 gconv 模块加载”。见 [iconv 环境变量说明](https://man7.org/linux/man-pages/man1/iconv.1.html)。
 
 外部[同类症状讨论](https://github.com/honey720/chzzk-vod-downloader-v2/issues/94#issuecomment-5090752830)提供了实验线索；其中的机器人诊断不是本项目独立确认原生根因的证据。修复后的完整测试与 CLI 是否通过，应按对应新 commit 查看 [CI](https://github.com/ngna5829-debug/video-temporal-audit/actions/workflows/tests.yml)。
+
+
+修复程序在提交`56dca8ca9cc2c48d8eba48763faafe08501c5770`的[Ubuntu实际CI](https://github.com/ngna5829-debug/video-temporal-audit/actions/runs/40086047531)通过：61项Python测试、12项JavaScript断言、包安装与CLI短片检查均成功；原负PTS用例完整执行。该源码的本机61项也通过，公开config/calibration/metrics逐字节保持。可读摘要见[UBUNTU_CI_FIX50.json](UBUNTU_CI_FIX50.json)。后续只补教材和证据的提交仍须看它自己对应的CI。

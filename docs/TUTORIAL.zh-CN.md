@@ -258,3 +258,28 @@ GitHub展示按输入、命令、结果、错误分析、个人改动排列，�
 角色20时点记录另保存59项Python测试、12项JavaScript协议断言、24个预览尾帧独立检查和真实浏览器Range/Blob回放；这些是既有角色验收，不冒称本章重跑。完整demo保存耗时约15.75秒，是一次机器运行时间，不是学习耗时；后续非法输入加固未重跑完整demo，公开指标字节不变。本章未执行全套测试、完整demo、新真人评分、真实模型推理或发布。你完成自己的运行后，应在 `MY_WORK.md`写上实际命令、输入、结果和缺口，再据这些证据决定能对外说明什么。
 
 2026-10-24角色50复核修复了自有数据的来源标注：非CONTROLLED声明的清单，其汇总与单片均标为human_unverified，正常片误报统计也不再暗称参考完整；校准说明记录实际声明组数。CONTROLLED是清单中的来源声明，不是程序替你完成了素材或人工身份核验。新增1个回归方法覆盖受控、自有及无nature三分支，当前60项Python测试全部通过；20片公开metrics及校准config/calibration均与原件逐字节相同。该分支检查仍用复制的小型受控素材，不是新增自然数据或真人研究。细节见docs/PROVENANCE_FIX50.json。
+
+
+### 同一代码在Ubuntu出错：怎样把依赖故障缩成单变量实验
+
+最后一次远端测试发现，本机Mac的FFmpeg7.1可以读取负时间戳TS，Ubuntu24.04.5捆绑的FFmpeg7.0.2-static则直接返回-11（SIGSEGV，原生进程崩溃），stderr为空。Python只负责启动另一个FFmpeg进程；这个错误不是Python语法错误，也不是评分阈值不合适。空stderr不代表成功，必须查看退出码及实际输出文件。修复前60项测试中仅负时间戳用例失败，其余59项通过。
+
+排查先固定4324字节的同一TS、输入SHA和命令，分别输出PNG与null；两路均崩溃，因此不能先把问题归到PNG编码。下一次只改子进程环境，设置GCONV_PATH=/dev/null，二者都返回0，PNG恰好8帧，原始PTS从-2到-1.416667秒，输入SHA前后相同。这给出本次兼容处理的实验依据，没有转码覆盖原片、删负时间戳或跳过测试。
+
+环境变量是进程启动时读取的一组字符串配置。media.py:_ffmpeg_subprocess_env()复制当前环境，仅当Linux、程序确在imageio_ffmpeg的binaries目录、版本7.0.2-static且供应商标识匹配时，为该FFmpeg子进程设置GCONV_PATH；全局os.environ不改变。decode_video和make_preview各自使用实际可执行文件及版本判断，不能只修解码而让生成预览再次崩溃。生效时report及preview的ffmpeg_compatibility字段保存策略和限制；本机Mac未命中，旧公开输出没有因此新增字段。
+
+字符转换配置会影响服务名等文字元数据，不能把这个处理写成所有编解码器通用修复。本轮没有做原生调用栈或模块跟踪，不把外部机器人的机制推测当成已独立证实的根因。新增加的边界测试覆盖Mac、系统FFmpeg、新版本、其他供应商及全局环境不变；视频项目当前61项、五项目236个不同测试方法。精确远端提交及CI结果见交付记录。
+
+从本仓库根和自己的虚拟环境查看实际依赖，不猜系统命令指向哪一份：
+
+```sh
+.venv/bin/python - <<'PY_CHECK'
+import subprocess
+import imageio_ffmpeg
+executable = imageio_ffmpeg.get_ffmpeg_exe()
+print(executable)
+print(subprocess.run([executable, '-version'], capture_output=True, text=True, check=True).stdout.splitlines()[0])
+PY_CHECK
+```
+
+这个命令只查看版本，不安装或更换程序。完整同字节对照、适用条件和官方环境变量资料见[Linux解码兼容记录](https://github.com/ngna5829-debug/video-temporal-audit/blob/main/docs/FFMPEG_COMPATIBILITY.md)。遇到别的版本或容器出错时，先留下原件、SHA、退出码和版本，重新做小样本验证，不把本例环境变量当作通用报错开关。

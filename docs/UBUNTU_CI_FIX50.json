@@ -1,0 +1,45 @@
+{
+  "schema_version": "ubuntu-ffmpeg-compatibility-fix50-v1",
+  "date": "2026-10-24",
+  "source_commit": "56dca8ca9cc2c48d8eba48763faafe08501c5770",
+  "ci": {
+    "url": "https://github.com/ngna5829-debug/video-temporal-audit/actions/runs/40086047531",
+    "run_id": 40086047531,
+    "job_id": 120849097154,
+    "conclusion": "success",
+    "python_test_methods": 61,
+    "skipped": 0,
+    "unittest_seconds": 5.989,
+    "javascript_assertions": 12,
+    "controlled_cli_frames": 48,
+    "controlled_cli_events": 1,
+    "original_job_log_sha256": "9f6b14c14a6920dd0a0b73e783a1a28458ad8bae6defef5be4607697bd941074"
+  },
+  "implementation_sha256": {
+    "video_temporal_audit/media.py": "b936e79ef26de9367bbb340307fa3b20f56855fd3cb61cd9fe558681aaa0c027",
+    "tests/test_bad_inputs.py": "870c713f340f619d425a4ad17a9223a7c5f29583aca5145e325b20f004c2378b"
+  },
+  "local_mac_test_methods": 61,
+  "local_mac_exit_code": 0,
+  "controlled_files": [
+    {
+      "file": "config.json",
+      "sha256": "847e1fe9633684b082cfb3434424fc0806688cfd8709c75516e8683e44d409be",
+      "byte_equal": true
+    },
+    {
+      "file": "calibration.json",
+      "sha256": "65d25c99ea21118d4a5c925a2e416e4fa9a1dd2e66fd7a22d3687da1f8a24d09",
+      "byte_equal": true
+    },
+    {
+      "file": "metrics.json",
+      "sha256": "5dae9b603af66fd00395528c9ee445ee4de631f1b41725afec1200dbbc4d0c45",
+      "byte_equal": true
+    }
+  ],
+  "compatibility_scope": "Only Linux + current imageio_ffmpeg package binaries + exact 7.0.2-static johnvansickle version identity; FFmpeg child environment only. Global environment, input bytes, original PTS and detection rules are unchanged.",
+  "limits": "The same-input Ubuntu environment contrast supports this measured workaround; no native stack/module trace establishes the internal crash mechanism. Service-name charset conversion may differ; no all-codec/all-distribution guarantee.",
+  "model_calls": 0,
+  "new_human_ratings": 0
+}

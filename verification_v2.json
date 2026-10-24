@@ -304,5 +304,13 @@
     "python_test_methods": 60,
     "test_exit_code": 0,
     "controlled_metrics_byte_equal": true
+  },
+  "post_role50_linux_runtime_compatibility": {
+    "record": "docs/UBUNTU_CI_FIX50.json",
+    "sha256": "20ce00e350ad9af0cde1787f91e1dab2a5e5f63325912b4050a91e04d95a858c",
+    "source_commit": "56dca8ca9cc2c48d8eba48763faafe08501c5770",
+    "python_test_methods": 61,
+    "ubuntu_ci_conclusion": "success",
+    "scope": "Specific source commit; earlier counts/hashes remain historical."
   }
 }
