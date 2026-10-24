@@ -1,6 +1,7 @@
 """Adversarial media, CLI and review boundaries; real tiny FFmpeg fixtures."""
 import copy
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -99,11 +100,21 @@ class ActualMediaBoundaries(unittest.TestCase):
                                  capture_output=True, text=True, timeout=30)
             null = subprocess.run(command+["-f", "null", "-"],
                                   capture_output=True, text=True, timeout=30)
+            isolated_png = subprocess.run(command+[str(self.root/"negative_diagnostic_%06d.png")],
+                                          env={**os.environ, "GCONV_PATH": os.devnull},
+                                          capture_output=True, text=True, timeout=30)
+            isolated = subprocess.run(command+["-f", "null", "-"],
+                                      env={**os.environ, "GCONV_PATH": os.devnull},
+                                      capture_output=True, text=True, timeout=30)
             self.fail(f"Negative PTS analysis failed: {error}\n"
                       f"Fixture bytes={source.stat().st_size}; sha256={sha256(source)}\n"
                       f"FFmpeg version:\n{version.stdout}\n"
                       f"Same-pass PNG exit={png.returncode}:\n{png.stderr}\n"
-                      f"Null output decode exit={null.returncode}:\n{null.stderr}")
+                      f"Null output decode exit={null.returncode}:\n{null.stderr}\n"
+                      f"Isolated gconv PNG exit={isolated_png.returncode}; "
+                      f"PNG files={len(list(self.root.glob('negative_diagnostic_*.png')))}:\n{isolated_png.stderr}\n"
+                      f"Isolated gconv null decode exit={isolated.returncode}:\n{isolated.stderr}\n"
+                      f"After diagnostics fixture sha256={sha256(source)}")
         self.assertEqual(report["source_start_s"], -2.)
         self.assertEqual(report["relative_pts_s"][0], 0.)
         self.assertEqual(len(report["source_pts_s"]), 8)
