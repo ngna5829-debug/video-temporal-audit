@@ -7,6 +7,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import imageio_ffmpeg
 
@@ -14,7 +15,7 @@ from video_temporal_audit import __version__
 from video_temporal_audit.core import DEFAULT_CONFIG, detect_events, match_events, validate_config
 from video_temporal_audit.evaluation import CONFIG_SCHEMA, canonical_digest
 from video_temporal_audit.fixtures import encode_frames, motion_frames
-from video_temporal_audit.media import decode_video, sha256
+from video_temporal_audit.media import _ffmpeg_subprocess_env, decode_video, sha256
 from video_temporal_audit.report import analyze_video
 from video_temporal_audit.reviews import REVIEW_SCHEMA, import_reviews
 
@@ -124,6 +125,11 @@ class ActualMediaBoundaries(unittest.TestCase):
         event = report["events"][0]
         self.assertLess(event["start_s"], 0)
         self.assertEqual(event["playback_start_s"], event["start_s"]+2.)
+        self.assertEqual(report["input_sha256"], sha256(source))
+        compatibility = report.get("ffmpeg_compatibility")
+        if compatibility:
+            self.assertEqual(compatibility["subprocess_environment"], {"GCONV_PATH": os.devnull})
+            self.assertEqual(report["preview"]["ffmpeg_compatibility"], compatibility)
 
     def test_frame_limit_refuses_truncation(self):
         with self.assertRaisesRegex(ValueError, "Frame limit"):
@@ -154,6 +160,30 @@ class ActualMediaBoundaries(unittest.TestCase):
         self.assertEqual(result.returncode, 2, result.stderr)
         self.assertNotIn("Traceback", result.stderr)
         self.assertFalse(output.exists())
+
+
+class FFmpegEnvironmentBoundaries(unittest.TestCase):
+    def test_known_bundled_linux_build_is_scoped_without_global_environment_changes(self):
+        bundled = Path(imageio_ffmpeg.__file__).resolve().parent/"binaries"/"ffmpeg-linux-x86_64-v7.0.2"
+        version = "ffmpeg version 7.0.2-static https://johnvansickle.com/ffmpeg/ Copyright FFmpeg developers"
+        with patch.dict(os.environ, {"GCONV_PATH": "caller-choice", "AUDIT_ENV_SENTINEL": "keep"}):
+            before = dict(os.environ)
+            cases = [("linux", bundled, version, True),
+                     ("darwin", bundled, version, False),
+                     ("win32", bundled, version, False),
+                     ("linux", Path("/usr/bin/ffmpeg"), version, False),
+                     ("linux", bundled, version.replace("7.0.2-static", "7.1-static"), False),
+                     ("linux", bundled, version.replace("johnvansickle.com", "another-builder.example"), False)]
+            for platform, executable, build, applies in cases:
+                with self.subTest(platform=platform, executable=str(executable), build=build):
+                    with patch("video_temporal_audit.media.sys.platform", platform):
+                        environment = _ffmpeg_subprocess_env(executable, build)
+                    if applies:
+                        self.assertEqual(environment, {**before, "GCONV_PATH": os.devnull})
+                        self.assertIsNot(environment, os.environ)
+                    else:
+                        self.assertIsNone(environment)
+                    self.assertEqual(dict(os.environ), before)
 
 
 class DetectionInputBoundaries(unittest.TestCase):

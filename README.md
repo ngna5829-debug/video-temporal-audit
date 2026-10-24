@@ -104,6 +104,8 @@ node tests/test_timeline.js
 
 Node 仅用于协议测试，不是首次分析视频所需依赖。坏媒体、非法配置/时间、错误复核或拒绝覆盖通常以 `ERROR: ...` 和退出码 **2** 结束；零候选不是质量通过。现有规则不评价身份一致性、物理规律、口型或音轨，多物体运动、视差、遮挡和弱纹理也可能导致全局运动拟合失败。
 
+Linux 捆绑 FFmpeg 7.0.2-static 的 MPEG-TS 兼容处理只作用于符合条件的 FFmpeg 子进程，并写入报告。实际 Ubuntu 同输入对照、限定条件与服务名字符转换限制见 [FFmpeg 兼容说明](docs/FFMPEG_COMPATIBILITY.md)。
+
 源码 [MIT](LICENSE)；程序生成的几何夹具 [CC0](FIXTURE_LICENSE.md)。个人媒体与运行目录应保留在 `data/private/`、`runs/` 等已忽略位置；授权说明与来源需要自己记录。
 
 
