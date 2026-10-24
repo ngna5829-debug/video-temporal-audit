@@ -1,0 +1,220 @@
+{
+  "schema_version": 2,
+  "evaluator_version": "0.2.0",
+  "status": "completed",
+  "command": "python -m video_temporal_audit demo-v2 --output NEW_DIR",
+  "wall_time_s": 15.749611041974276,
+  "platform": "macOS-15.6.1-arm64-arm-64bit",
+  "python": "3.12.14",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "opencv": "4.13.0",
+    "Pillow": "12.3.0"
+  },
+  "peak_rss_bytes_python_process": 208633856,
+  "peak_rss_scope": "macOS ru_maxrss in bytes; Python process only, FFmpeg subprocess peaks excluded",
+  "dataset_clips": 28,
+  "test_clips": 20,
+  "declared_test_source_groups": 4,
+  "actual_model_calls": 0,
+  "actual_human_ratings": 0,
+  "ablation_counts": {
+    "original_rule": {
+      "tp": 8,
+      "fp": 26,
+      "fn": 2,
+      "precision": 0.23529411764705882,
+      "recall": 0.8,
+      "f1": 0.36363636363636365
+    },
+    "motion_compensated_rule": {
+      "tp": 8,
+      "fp": 4,
+      "fn": 2,
+      "precision": 0.6666666666666666,
+      "recall": 0.8,
+      "f1": 0.7272727272727273
+    }
+  },
+  "timing_checks": {
+    "offset5": {
+      "frame_count": 48,
+      "source_start_s": 5.0,
+      "distinct_interframe_deltas_s": [
+        0.08333
+      ],
+      "preview_mapping_max_error_s": 3.000000003416936e-07,
+      "source_end_is_estimated": true,
+      "source_last_duration_source": "median_delta_ESTIMATE",
+      "preview_end_s": 4.0000003,
+      "preview_end_mapping_error_s": 2.9999999995311555e-07,
+      "preview_last_duration_s": 0.0833333
+    },
+    "vfr": {
+      "frame_count": 48,
+      "source_start_s": 0.0,
+      "distinct_interframe_deltas_s": [
+        0.08333,
+        0.16659,
+        0.16667,
+        0.16675
+      ],
+      "preview_mapping_max_error_s": 3.9999999996709334e-06,
+      "source_end_is_estimated": true,
+      "source_last_duration_source": "median_delta_ESTIMATE",
+      "preview_end_s": 5.916666299999999,
+      "preview_end_mapping_error_s": 7.000000001866624e-07,
+      "preview_last_duration_s": 0.0833333
+    },
+    "single_frame": {
+      "frame_count": 1,
+      "source_start_s": 0.0,
+      "distinct_interframe_deltas_s": [],
+      "preview_mapping_max_error_s": 0.0,
+      "source_end_is_estimated": false,
+      "source_last_duration_source": "showinfo_duration",
+      "preview_end_s": 0.0833333,
+      "preview_end_mapping_error_s": 0.0,
+      "preview_last_duration_s": 0.0833333
+    },
+    "offset_flash": {
+      "source_start_s": 5.0,
+      "events": [
+        {
+          "source_start_s": 7.0,
+          "playback_start_s": 2.0,
+          "click_preroll_target_s": 1.5
+        }
+      ],
+      "preview_mapping_max_error_s": 3.000000003416936e-07,
+      "source_end_is_estimated": true,
+      "source_last_duration_source": "median_delta_ESTIMATE",
+      "preview_end_s": 4.0000003,
+      "preview_end_mapping_error_s": 2.9999999995311555e-07,
+      "preview_last_duration_s": 0.0833333
+    }
+  },
+  "artifact_hash_entries_verified": 129,
+  "calibration_trials": 36,
+  "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+  "browser_interaction_validation": "Role18 actual browser checks passed on regenerated preview: duration4.0, seekable[0,4], actual event playback confirmed with ordinary HTTP Blob fallback and Range HTTP.",
+  "metric_artifact_sha256": "5dae9b603af66fd00395528c9ee445ee4de631f1b41725afec1200dbbc4d0c45",
+  "index_sha256": "d276ffbdd9379e859c663dbaa620342178f2ba66f91e3f77a92dc115820fef6d",
+  "test_status": "passed",
+  "python_unit_and_integration_tests": 59,
+  "javascript_protocol_assertions": 12,
+  "tests_output": "tests_v2_output.txt",
+  "javascript_tests_output": "timeline_tests_v2_output.txt",
+  "source_sha256": {
+    "video_temporal_audit/__init__.py": "537debceba9fb41277fb81ba971423676fd6516a8c83a849979a26efc5ae45aa",
+    "video_temporal_audit/__main__.py": "446b30690878086f6718ae178517048d03279247f080d1a02aa2574ba6918f20",
+    "video_temporal_audit/core.py": "0a3979374380e114e3029e610428758146ad0ff33d4cbc6943c477c3ac94222e",
+    "video_temporal_audit/demo.py": "fa031ce1834971eeae414ccc7c6283fff440177216eeaa31a348ce1ffcee4d85",
+    "video_temporal_audit/evaluation.py": "cac14fcb2601d80157753062e37d5338d23f22b5b53210eadf4a19d20f70f70d",
+    "video_temporal_audit/fixtures.py": "f73a4b8f0ac92cee82e9c4028eec8d81e39faeafa706b90b64d5d83d058f8bbb",
+    "video_temporal_audit/media.py": "9dc432efacb56e28419c5b31a6e232c15eaa4360188547603df2bb9ce6ad333e",
+    "video_temporal_audit/motion.py": "33e5c935ef5ebbf7372dfb5f99ea37467edcb05c7ba2d6a16c415ebda20f99b0",
+    "video_temporal_audit/report.py": "4b39e2d2e5864b0fb018999cb4b8a964de0387e3b7e52f86bb86cdc930d66e97",
+    "video_temporal_audit/reviews.py": "37a87f1b63a1ee39fd527d188fd5bfde7ed2804c8dbe1008779d4cb0f5355cdc",
+    "video_temporal_audit/serve.py": "db824719c321573499e4ae46c5450cea8ea2ec6786beb67175f2d5673f4b2178",
+    "video_temporal_audit/timeline.js": "53a91b556ee37a9f3ea757c29428fdd03a33ffc113b9b2307daf092292fad93f"
+  },
+  "tests_sha256": {
+    "tests/test_core.py": "341167588278ce57527a1831cce954de5c2cb7a9e8a5b653855f58ea1ff0a1e3",
+    "tests/test_media.py": "abd06a9dc7f8fdf8160655335792b600594229543d477eaf35579d99169da361",
+    "tests/test_serve.py": "9f7ab881315b4c7628a4a39ce4fde112c42732fc779c5e68af18a0b4dc4a5ef7",
+    "tests/test_timeline.js": "c9e046ad96f5248314e4a899e1e345ff2685d96b92f3088b75b38009f447c2ff",
+    "tests/test_timing_review.py": "57c9c3e0fcb77c89e174932269cb6b5f519de5fc9328b233599a79dccb8cabb7",
+    "tests/test_v2.py": "10b56a6d049daa4d5c834c28186be8d7f8c9c21a477bfa5390dcbff4852b4eee",
+    "tests/test_bad_inputs.py": "d5c6388b2d5699d15d06db600db72463bc6ff16978c0bd5b745f42b62606ef5a"
+  },
+  "independent_timing_review": {
+    "reviewer": "14/50",
+    "artifact_hash_entries_verified": 129,
+    "ffprobe_previews_verified": 24,
+    "tail_packet_duration_and_event_coverage": "passed",
+    "source_tail_estimation_cases": [
+      "timing/vfr",
+      "timing/offset5",
+      "timing/offset_flash"
+    ],
+    "dataset_and_metrics_unchanged": true,
+    "browser_recheck_status": "passed by role18; actual duration 4.0 and event playback verified"
+  },
+  "demo_source_sha256": {
+    "video_temporal_audit/__init__.py": "537debceba9fb41277fb81ba971423676fd6516a8c83a849979a26efc5ae45aa",
+    "video_temporal_audit/__main__.py": "b975a87ee94e548e1c7cbe5a24658b6d7d1a3d4fb2da1eb1fa9cf11ac60a88f0",
+    "video_temporal_audit/core.py": "21c692df9619c69f09a6ec1cc936d12a5439a8226031b2fe8d2048b3e44c5ae7",
+    "video_temporal_audit/demo.py": "fa031ce1834971eeae414ccc7c6283fff440177216eeaa31a348ce1ffcee4d85",
+    "video_temporal_audit/evaluation.py": "cac14fcb2601d80157753062e37d5338d23f22b5b53210eadf4a19d20f70f70d",
+    "video_temporal_audit/fixtures.py": "f73a4b8f0ac92cee82e9c4028eec8d81e39faeafa706b90b64d5d83d058f8bbb",
+    "video_temporal_audit/media.py": "9dc432efacb56e28419c5b31a6e232c15eaa4360188547603df2bb9ce6ad333e",
+    "video_temporal_audit/motion.py": "33e5c935ef5ebbf7372dfb5f99ea37467edcb05c7ba2d6a16c415ebda20f99b0",
+    "video_temporal_audit/report.py": "4b39e2d2e5864b0fb018999cb4b8a964de0387e3b7e52f86bb86cdc930d66e97",
+    "video_temporal_audit/reviews.py": "748a4959e0470a629cb5341e4c8787279c6b4e70d1f1030460bb71f357e27b5c",
+    "video_temporal_audit/serve.py": "db824719c321573499e4ae46c5450cea8ea2ec6786beb67175f2d5673f4b2178",
+    "video_temporal_audit/timeline.js": "53a91b556ee37a9f3ea757c29428fdd03a33ffc113b9b2307daf092292fad93f"
+  },
+  "input_validation_review": {
+    "role": 20,
+    "new_tests": 15,
+    "full_tests_passed": 59,
+    "full_tests_wall_time_s": 9.468,
+    "public_reports_checked": 24,
+    "metric_bytes_unchanged": true,
+    "demo_rerun": false,
+    "scope": "Valid-input detection and timing are unchanged; earlier full demo execution remains the source of the published metrics."
+  },
+  "browser_playback_validation_after_tail_duration_fix": {
+    "project": "P2",
+    "ordinary_http": {
+      "ordinary_http_blob_fallback": {
+        "before": {
+          "currentTime": 0,
+          "duration": 4,
+          "paused": true,
+          "readyState": 4,
+          "seekable": [
+            [
+              0,
+              4
+            ]
+          ]
+        },
+        "after": {
+          "currentTime": 1.745302,
+          "duration": 4,
+          "paused": false,
+          "readyState": 4
+        }
+      },
+      "source_start": 5,
+      "event_source_pts": 7,
+      "event_player_position": 2,
+      "preroll": 0.5,
+      "expected_seek": 1.5
+    },
+    "range_http": {
+      "before": {
+        "currentTime": 0,
+        "duration": 4,
+        "paused": true,
+        "readyState": 4,
+        "seekable": [
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "after": {
+        "currentTime": 1.758484,
+        "duration": 4,
+        "paused": false,
+        "readyState": 4
+      }
+    },
+    "conclusion": "duration4.0 and seekable[0,4] for both; playing currentTime1.745302/1.758484 after event click, consistent with requested seek1.5 plus playback latency",
+    "screenshot": "p2_playback.png"
+  }
+}

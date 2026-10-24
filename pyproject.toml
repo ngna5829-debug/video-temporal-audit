@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "video-temporal-audit"
+version = "0.2.0"
+description = "CPU temporal candidates with source timestamps, controlled fixtures and event evaluation"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = ["numpy==2.3.5", "Pillow==12.3.0", "imageio==2.37.0", "imageio-ffmpeg==0.6.0", "opencv-python-headless==4.13.0.92"]
+
+[project.scripts]
+video-temporal-audit = "video_temporal_audit.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["video_temporal_audit*"]
+
+[tool.setuptools.package-data]
+video_temporal_audit = ["timeline.js"]

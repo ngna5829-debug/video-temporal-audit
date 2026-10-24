@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite the project version and separately cite upstream methods you actually run."
+title: "Video Temporal Audit: controlled CPU temporal diagnostics"
+type: software
+version: 0.2.0
+date-released: 2026-10-23
+license: MIT
+authors:
+  - name: "Video Temporal Audit contributors"

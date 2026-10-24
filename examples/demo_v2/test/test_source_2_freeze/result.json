@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "project_id": "video-temporal-audit",
+  "operation": "analyze",
+  "status": "completed",
+  "input_digest": "d68edd6d2c385a84c18dd4fba4ea9baa0bcf0df6e3feb9449bb26572191d65f2",
+  "config_digest": "194d4474cae6463dfef77af17d8b692066c5b2b1dbef753e92617a12f3fccea7",
+  "evaluator_version": "0.2.0",
+  "artifacts": [
+    {
+      "path": "evidence/E001_f00017.png",
+      "sha256": "135a31b460d76576da44628384cbfd02eb919538872e554c0d9eb899daff2098",
+      "type": "png"
+    },
+    {
+      "path": "evidence/E001_f00023.png",
+      "sha256": "135a31b460d76576da44628384cbfd02eb919538872e554c0d9eb899daff2098",
+      "type": "png"
+    },
+    {
+      "path": "evidence/E001_f00029.png",
+      "sha256": "135a31b460d76576da44628384cbfd02eb919538872e554c0d9eb899daff2098",
+      "type": "png"
+    },
+    {
+      "path": "frames.csv",
+      "sha256": "1cfe1a3f50d0033a7448c901dd4041ae8f91127fd3b9ece1d1486f280590b626",
+      "type": "csv"
+    },
+    {
+      "path": "preview.mp4",
+      "sha256": "a014bb11af527443265fd286be7a0afe824878069ae56e542a576dc9342c31c3",
+      "type": "mp4"
+    },
+    {
+      "path": "report.json",
+      "sha256": "e42f576a6f92592ddcd8e7741aa23f777c3412ff82055ac1f4784784a7bafb7d",
+      "type": "json"
+    },
+    {
+      "path": "timeline.html",
+      "sha256": "602554f9098b92d73fac320bc9a97306739e6866f1970eebe07bbc50f7b26938",
+      "type": "html"
+    }
+  ],
+  "counts": {
+    "frames": 48,
+    "events": 1,
+    "reviewed": 0
+  },
+  "warnings": [
+    "程序完成与视频质量结论不同；候选仍需人工复核。"
+  ]
+}

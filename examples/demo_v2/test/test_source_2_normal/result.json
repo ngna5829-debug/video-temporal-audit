@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "project_id": "video-temporal-audit",
+  "operation": "analyze",
+  "status": "completed",
+  "input_digest": "0831877cf0a8d096a2baa32cfaa4ac062d5aeb04d3139e0e329932dcb5ad7f12",
+  "config_digest": "194d4474cae6463dfef77af17d8b692066c5b2b1dbef753e92617a12f3fccea7",
+  "evaluator_version": "0.2.0",
+  "artifacts": [
+    {
+      "path": "frames.csv",
+      "sha256": "c01b322d46386e10aaac88c6c2f5284ee63dbfab1f680ed436f000d50a522e1f",
+      "type": "csv"
+    },
+    {
+      "path": "preview.mp4",
+      "sha256": "9a8dfbb553bdd7c7f2416896789860968cf1c7040b5ffcf0f6b6f998bb97d509",
+      "type": "mp4"
+    },
+    {
+      "path": "report.json",
+      "sha256": "fabfaeb51abe57451bd69581ccbaf275aba7a4ee7a32f36989da7be690b18209",
+      "type": "json"
+    },
+    {
+      "path": "timeline.html",
+      "sha256": "c0548f3f0a79a7af176a373f3da955b37fc1d4fa204bee24beea4ca0f334ea20",
+      "type": "html"
+    }
+  ],
+  "counts": {
+    "frames": 48,
+    "events": 0,
+    "reviewed": 0
+  },
+  "warnings": [
+    "程序完成与视频质量结论不同；候选仍需人工复核。"
+  ]
+}

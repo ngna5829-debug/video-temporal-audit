@@ -1,0 +1,59 @@
+PROJECT ROOT: exit=0
+test_cut_guard_suppresses_brightness_false_candidate (test_core.TemporalRulesTests.test_cut_guard_suppresses_brightness_false_candidate) ... ok
+test_dimensions_rejected (test_core.TemporalRulesTests.test_dimensions_rejected) ... ok
+test_hold_segment_uses_timestamp_duration (test_core.TemporalRulesTests.test_hold_segment_uses_timestamp_duration) ... ok
+test_missing_or_duplicate_time_rejected (test_core.TemporalRulesTests.test_missing_or_duplicate_time_rejected) ... ok
+test_nonfinite_config_rejected (test_core.TemporalRulesTests.test_nonfinite_config_rejected) ... ok
+test_one_to_one_and_type_matching (test_core.TemporalRulesTests.test_one_to_one_and_type_matching) ... ok
+test_single_frame_no_temporal_candidate (test_core.TemporalRulesTests.test_single_frame_no_temporal_candidate) ... ok
+test_zero_denominators_not_zero_accuracy (test_core.TemporalRulesTests.test_zero_denominators_not_zero_accuracy) ... ok
+test_changed_calibration_labels_refuses_old_config (test_media.DecodeIntegrationTests.test_changed_calibration_labels_refuses_old_config) ... ok
+test_changed_calibration_media_with_fresh_hash_refuses_old_config (test_media.DecodeIntegrationTests.test_changed_calibration_media_with_fresh_hash_refuses_old_config) ... ok
+test_changed_threshold_refuses_old_digest (test_media.DecodeIntegrationTests.test_changed_threshold_refuses_old_digest) ... ok
+test_corrupt_or_excess_frames_fail (test_media.DecodeIntegrationTests.test_corrupt_or_excess_frames_fail) ... ok
+test_four_second_video_cannot_use_hundred_second_truth (test_media.DecodeIntegrationTests.test_four_second_video_cannot_use_hundred_second_truth) ... ok
+test_group_overlap_rejected (test_media.DecodeIntegrationTests.test_group_overlap_rejected) ... ok
+test_identical_media_under_new_group_cannot_cross_split (test_media.DecodeIntegrationTests.test_identical_media_under_new_group_cannot_cross_split) ... ok
+test_new_test_input_does_not_change_calibration_binding (test_media.DecodeIntegrationTests.test_new_test_input_does_not_change_calibration_binding) ... ok
+test_nonzero_source_start_rejects_player_relative_truth (test_media.DecodeIntegrationTests.test_nonzero_source_start_rejects_player_relative_truth) ... ok
+test_old_evaluator_version_refused (test_media.DecodeIntegrationTests.test_old_evaluator_version_refused) ... ok
+test_report_has_portable_paths_and_readback (test_media.DecodeIntegrationTests.test_report_has_portable_paths_and_readback) ... ok
+test_source_offset_and_space_path (test_media.DecodeIntegrationTests.test_source_offset_and_space_path) ... ok
+test_truth_at_source_interval_edges_is_valid (test_media.DecodeIntegrationTests.test_truth_at_source_interval_edges_is_valid) ... ok
+test_unsafe_clip_output_name_rejected (test_media.DecodeIntegrationTests.test_unsafe_clip_output_name_rejected) ... ok
+test_vfr_retained (test_media.DecodeIntegrationTests.test_vfr_retained) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.873s
+
+OK
+
+COPIED REPOSITORY PATH WITH SPACES: exit=0
+test_cut_guard_suppresses_brightness_false_candidate (test_core.TemporalRulesTests.test_cut_guard_suppresses_brightness_false_candidate) ... ok
+test_dimensions_rejected (test_core.TemporalRulesTests.test_dimensions_rejected) ... ok
+test_hold_segment_uses_timestamp_duration (test_core.TemporalRulesTests.test_hold_segment_uses_timestamp_duration) ... ok
+test_missing_or_duplicate_time_rejected (test_core.TemporalRulesTests.test_missing_or_duplicate_time_rejected) ... ok
+test_nonfinite_config_rejected (test_core.TemporalRulesTests.test_nonfinite_config_rejected) ... ok
+test_one_to_one_and_type_matching (test_core.TemporalRulesTests.test_one_to_one_and_type_matching) ... ok
+test_single_frame_no_temporal_candidate (test_core.TemporalRulesTests.test_single_frame_no_temporal_candidate) ... ok
+test_zero_denominators_not_zero_accuracy (test_core.TemporalRulesTests.test_zero_denominators_not_zero_accuracy) ... ok
+test_changed_calibration_labels_refuses_old_config (test_media.DecodeIntegrationTests.test_changed_calibration_labels_refuses_old_config) ... ok
+test_changed_calibration_media_with_fresh_hash_refuses_old_config (test_media.DecodeIntegrationTests.test_changed_calibration_media_with_fresh_hash_refuses_old_config) ... ok
+test_changed_threshold_refuses_old_digest (test_media.DecodeIntegrationTests.test_changed_threshold_refuses_old_digest) ... ok
+test_corrupt_or_excess_frames_fail (test_media.DecodeIntegrationTests.test_corrupt_or_excess_frames_fail) ... ok
+test_four_second_video_cannot_use_hundred_second_truth (test_media.DecodeIntegrationTests.test_four_second_video_cannot_use_hundred_second_truth) ... ok
+test_group_overlap_rejected (test_media.DecodeIntegrationTests.test_group_overlap_rejected) ... ok
+test_identical_media_under_new_group_cannot_cross_split (test_media.DecodeIntegrationTests.test_identical_media_under_new_group_cannot_cross_split) ... ok
+test_new_test_input_does_not_change_calibration_binding (test_media.DecodeIntegrationTests.test_new_test_input_does_not_change_calibration_binding) ... ok
+test_nonzero_source_start_rejects_player_relative_truth (test_media.DecodeIntegrationTests.test_nonzero_source_start_rejects_player_relative_truth) ... ok
+test_old_evaluator_version_refused (test_media.DecodeIntegrationTests.test_old_evaluator_version_refused) ... ok
+test_report_has_portable_paths_and_readback (test_media.DecodeIntegrationTests.test_report_has_portable_paths_and_readback) ... ok
+test_source_offset_and_space_path (test_media.DecodeIntegrationTests.test_source_offset_and_space_path) ... ok
+test_truth_at_source_interval_edges_is_valid (test_media.DecodeIntegrationTests.test_truth_at_source_interval_edges_is_valid) ... ok
+test_unsafe_clip_output_name_rejected (test_media.DecodeIntegrationTests.test_unsafe_clip_output_name_rejected) ... ok
+test_vfr_retained (test_media.DecodeIntegrationTests.test_vfr_retained) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 1.215s
+
+OK

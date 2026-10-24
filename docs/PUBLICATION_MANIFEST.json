@@ -1,0 +1,20 @@
+{
+  "schema_version": "publication-transform-v1",
+  "changed": [
+    {
+      "path": "verification_v2.json",
+      "original_sha256": "814dfb8d9dce26def4e1b644ed2670c3fe34642ccdce8728d13168e969832e0c",
+      "published_sha256": "23086fbca6f455a29492c615f9c34974be3cc90a9cca1f0451c3b1d23eb00c9e",
+      "original_bytes": 12207,
+      "published_bytes": 12516,
+      "transformations": [
+        "author_home_path_redaction"
+      ]
+    }
+  ],
+  "removed": [],
+  "raw_private_distributed": false,
+  "preserved_algorithm_source": true,
+  "book_chapters_edited": false,
+  "scope": "Public derivative transformations; original numerical outcomes/timings retained, no new experiment claim."
+}

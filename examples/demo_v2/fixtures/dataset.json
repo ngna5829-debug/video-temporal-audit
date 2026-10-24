@@ -1,0 +1,418 @@
+{
+  "schema_version": 1,
+  "nature": "CONTROLLED_SYNTHETIC_MP4_NOT_MODEL_OUTPUTS",
+  "license": "CC0-1.0 for generated geometric fixtures only",
+  "time_origin": "source PTS seconds; controlled event fixture start is zero",
+  "clips": [
+    {
+      "clip_id": "calibration_source_1_normal",
+      "source_group": "calibration_source_1",
+      "split": "calibration",
+      "kind": "normal",
+      "path": "media/calibration_source_1_normal.mp4",
+      "sha256": "b4c20215614ed11434afdcc42529df5f36ef1e5ff2f70206e719c47502e1d168",
+      "truth": []
+    },
+    {
+      "clip_id": "calibration_source_1_freeze",
+      "source_group": "calibration_source_1",
+      "split": "calibration",
+      "kind": "freeze",
+      "path": "media/calibration_source_1_freeze.mp4",
+      "sha256": "149fc19fd4cb19923bb642ba0a1b766fc69ff5e3a5cf5a3adee51c722a16998d",
+      "truth": [
+        {
+          "type": "freeze_candidate",
+          "start_s": 1.4166666666666667,
+          "end_s": 2.5
+        }
+      ]
+    },
+    {
+      "clip_id": "calibration_source_1_flicker",
+      "source_group": "calibration_source_1",
+      "split": "calibration",
+      "kind": "flicker",
+      "path": "media/calibration_source_1_flicker.mp4",
+      "sha256": "9f4def7250cbd07dba34ba4609cb731594228f7599d86fb541fc6974e51bde0e",
+      "truth": [
+        {
+          "type": "brightness_jump",
+          "start_s": 2.0,
+          "end_s": 2.1666666666666665
+        }
+      ]
+    },
+    {
+      "clip_id": "calibration_source_1_cut",
+      "source_group": "calibration_source_1",
+      "split": "calibration",
+      "kind": "cut",
+      "path": "media/calibration_source_1_cut.mp4",
+      "sha256": "7b9b1ce389dc0eb605e2957f50cd8447b90a2a2f23eade6a588ab090d5b385ef",
+      "truth": [
+        {
+          "type": "shot_cut_candidate",
+          "start_s": 2.0,
+          "end_s": 2.0833333333333335
+        }
+      ]
+    },
+    {
+      "clip_id": "calibration_source_2_normal",
+      "source_group": "calibration_source_2",
+      "split": "calibration",
+      "kind": "normal",
+      "path": "media/calibration_source_2_normal.mp4",
+      "sha256": "403f83fba8edbccc2d775b798d2287b02726ff1e26b644ef42f80962d31af9f4",
+      "truth": []
+    },
+    {
+      "clip_id": "calibration_source_2_freeze",
+      "source_group": "calibration_source_2",
+      "split": "calibration",
+      "kind": "freeze",
+      "path": "media/calibration_source_2_freeze.mp4",
+      "sha256": "f384d2d5b118aa39950add66e789ea1a75d3f1bb4eacfab1b88aae8646e76e9e",
+      "truth": [
+        {
+          "type": "freeze_candidate",
+          "start_s": 1.4166666666666667,
+          "end_s": 2.5
+        }
+      ]
+    },
+    {
+      "clip_id": "calibration_source_2_flicker",
+      "source_group": "calibration_source_2",
+      "split": "calibration",
+      "kind": "flicker",
+      "path": "media/calibration_source_2_flicker.mp4",
+      "sha256": "460be448e04e60a4e43c979ddae076e8b06046262edd4aa2adaec7b3b8268914",
+      "truth": [
+        {
+          "type": "brightness_jump",
+          "start_s": 2.0,
+          "end_s": 2.1666666666666665
+        }
+      ]
+    },
+    {
+      "clip_id": "calibration_source_2_cut",
+      "source_group": "calibration_source_2",
+      "split": "calibration",
+      "kind": "cut",
+      "path": "media/calibration_source_2_cut.mp4",
+      "sha256": "6d69d8e6a70a8284ab71e4e798e6a7d3b81af0b76243e2c74eff1dd8c0239b40",
+      "truth": [
+        {
+          "type": "shot_cut_candidate",
+          "start_s": 2.0,
+          "end_s": 2.0833333333333335
+        }
+      ]
+    },
+    {
+      "clip_id": "test_source_1_normal",
+      "source_group": "test_source_1",
+      "split": "test",
+      "kind": "normal",
+      "path": "media/test_source_1_normal.mp4",
+      "sha256": "0ed66a84c56472d6e70dcfaee7a0aeee6d53244d93defe82188de9ea1cc8b222",
+      "truth": []
+    },
+    {
+      "clip_id": "test_source_1_freeze",
+      "source_group": "test_source_1",
+      "split": "test",
+      "kind": "freeze",
+      "path": "media/test_source_1_freeze.mp4",
+      "sha256": "637937d6c84ac3983b5c4b203d0904bfa5931c0a5a2b16020fe1524140a2ed82",
+      "truth": [
+        {
+          "type": "freeze_candidate",
+          "start_s": 1.4166666666666667,
+          "end_s": 2.5
+        }
+      ]
+    },
+    {
+      "clip_id": "test_source_1_flicker",
+      "source_group": "test_source_1",
+      "split": "test",
+      "kind": "flicker",
+      "path": "media/test_source_1_flicker.mp4",
+      "sha256": "53ad623f212ad4249bd92b83d4e37d18fe31b2707d701b0a86014ab23956d9ae",
+      "truth": [
+        {
+          "type": "brightness_jump",
+          "start_s": 2.0,
+          "end_s": 2.1666666666666665
+        }
+      ]
+    },
+    {
+      "clip_id": "test_source_1_cut",
+      "source_group": "test_source_1",
+      "split": "test",
+      "kind": "cut",
+      "path": "media/test_source_1_cut.mp4",
+      "sha256": "f0922db923a39e9aed90e148c75ea2e5a0821990f318d0f5d6724163acd11ef8",
+      "truth": [
+        {
+          "type": "shot_cut_candidate",
+          "start_s": 2.0,
+          "end_s": 2.0833333333333335
+        }
+      ]
+    },
+    {
+      "clip_id": "test_source_2_normal",
+      "source_group": "test_source_2",
+      "split": "test",
+      "kind": "normal",
+      "path": "media/test_source_2_normal.mp4",
+      "sha256": "0831877cf0a8d096a2baa32cfaa4ac062d5aeb04d3139e0e329932dcb5ad7f12",
+      "truth": []
+    },
+    {
+      "clip_id": "test_source_2_freeze",
+      "source_group": "test_source_2",
+      "split": "test",
+      "kind": "freeze",
+      "path": "media/test_source_2_freeze.mp4",
+      "sha256": "d68edd6d2c385a84c18dd4fba4ea9baa0bcf0df6e3feb9449bb26572191d65f2",
+      "truth": [
+        {
+          "type": "freeze_candidate",
+          "start_s": 1.4166666666666667,
+          "end_s": 2.5
+        }
+      ]
+    },
+    {
+      "clip_id": "test_source_2_flicker",
+      "source_group": "test_source_2",
+      "split": "test",
+      "kind": "flicker",
+      "path": "media/test_source_2_flicker.mp4",
+      "sha256": "54a93b296fa2efec506ee670c8b170d8b433a6cdec984f2fbb822f128c8b6b0c",
+      "truth": [
+        {
+          "type": "brightness_jump",
+          "start_s": 2.0,
+          "end_s": 2.1666666666666665
+        }
+      ]
+    },
+    {
+      "clip_id": "test_source_2_cut",
+      "source_group": "test_source_2",
+      "split": "test",
+      "kind": "cut",
+      "path": "media/test_source_2_cut.mp4",
+      "sha256": "56fe29729ead04f793db9ab81d5d30164f8ebfee418f11736450ea9cabd278d5",
+      "truth": [
+        {
+          "type": "shot_cut_candidate",
+          "start_s": 2.0,
+          "end_s": 2.0833333333333335
+        }
+      ]
+    },
+    {
+      "clip_id": "test_challenge_1_pan",
+      "source_group": "test_challenge_1",
+      "split": "test",
+      "kind": "pan",
+      "path": "media/test_challenge_1_pan.mp4",
+      "sha256": "6fbf3242dadb843b06f1f235e674d5083c26af43faf7b97567d01f1d4d05b7df",
+      "truth": [],
+      "reference_origin": "constructed_truth",
+      "normal_counterexample": true,
+      "intent": "Legitimate camera/light/stillness change"
+    },
+    {
+      "clip_id": "test_challenge_1_zoom",
+      "source_group": "test_challenge_1",
+      "split": "test",
+      "kind": "zoom",
+      "path": "media/test_challenge_1_zoom.mp4",
+      "sha256": "32b3702ae78b915ea8ea10d040689cd1f9a73cec224c744de4170534faa6883e",
+      "truth": [],
+      "reference_origin": "constructed_truth",
+      "normal_counterexample": true,
+      "intent": "Legitimate camera/light/stillness change"
+    },
+    {
+      "clip_id": "test_challenge_1_low_texture_motion",
+      "source_group": "test_challenge_1",
+      "split": "test",
+      "kind": "low_texture_motion",
+      "path": "media/test_challenge_1_low_texture_motion.mp4",
+      "sha256": "6ae6066709290554867eb3c7dc11d06024559ef14f622391f8d273371d74d529",
+      "truth": [],
+      "reference_origin": "constructed_truth",
+      "normal_counterexample": true,
+      "intent": "Legitimate camera/light/stillness change"
+    },
+    {
+      "clip_id": "test_challenge_1_intentional_static",
+      "source_group": "test_challenge_1",
+      "split": "test",
+      "kind": "intentional_static",
+      "path": "media/test_challenge_1_intentional_static.mp4",
+      "sha256": "64bce00569a1b821ff2aa0b6621719e7cb69ffe64f17426772c111fe6d2b3892",
+      "truth": [],
+      "reference_origin": "constructed_truth",
+      "normal_counterexample": true,
+      "intent": "Legitimate camera/light/stillness change"
+    },
+    {
+      "clip_id": "test_challenge_1_fade",
+      "source_group": "test_challenge_1",
+      "split": "test",
+      "kind": "fade",
+      "path": "media/test_challenge_1_fade.mp4",
+      "sha256": "22c66f5602e9e7f48f48c6d46c6c2dcd88ee1564b3b2ea7a09f37bb99c95d089",
+      "truth": [],
+      "reference_origin": "constructed_truth",
+      "normal_counterexample": true,
+      "intent": "Legitimate camera/light/stillness change"
+    },
+    {
+      "clip_id": "test_challenge_1_cut_near_flash",
+      "source_group": "test_challenge_1",
+      "split": "test",
+      "kind": "cut_near_flash",
+      "path": "media/test_challenge_1_cut_near_flash.mp4",
+      "sha256": "b4d293d968205fbdb4f28ca818e865206f7f09f99713a06cecea2b9087256599",
+      "truth": [
+        {
+          "type": "shot_cut_candidate",
+          "start_s": 2.0,
+          "end_s": 2.0833333333333335
+        },
+        {
+          "type": "brightness_jump",
+          "start_s": 2.0833333333333335,
+          "end_s": 2.25
+        }
+      ],
+      "reference_origin": "constructed_truth",
+      "normal_counterexample": false,
+      "intent": "Cut with adjacent injected flash"
+    },
+    {
+      "clip_id": "test_challenge_2_pan",
+      "source_group": "test_challenge_2",
+      "split": "test",
+      "kind": "pan",
+      "path": "media/test_challenge_2_pan.mp4",
+      "sha256": "cdbc591a964625e4670d76f9abc6b9bb328607ab53e31a6639e03cb6d975805c",
+      "truth": [],
+      "reference_origin": "constructed_truth",
+      "normal_counterexample": true,
+      "intent": "Legitimate camera/light/stillness change"
+    },
+    {
+      "clip_id": "test_challenge_2_zoom",
+      "source_group": "test_challenge_2",
+      "split": "test",
+      "kind": "zoom",
+      "path": "media/test_challenge_2_zoom.mp4",
+      "sha256": "b1901e21e03983a241930d810c200c5c75001d0d0317d17b3f21855cc4788ddf",
+      "truth": [],
+      "reference_origin": "constructed_truth",
+      "normal_counterexample": true,
+      "intent": "Legitimate camera/light/stillness change"
+    },
+    {
+      "clip_id": "test_challenge_2_low_texture_motion",
+      "source_group": "test_challenge_2",
+      "split": "test",
+      "kind": "low_texture_motion",
+      "path": "media/test_challenge_2_low_texture_motion.mp4",
+      "sha256": "5f563e7ab351c806c6005250a2c7e386e345eac92ee9195600c7731f9ade9419",
+      "truth": [],
+      "reference_origin": "constructed_truth",
+      "normal_counterexample": true,
+      "intent": "Legitimate camera/light/stillness change"
+    },
+    {
+      "clip_id": "test_challenge_2_intentional_static",
+      "source_group": "test_challenge_2",
+      "split": "test",
+      "kind": "intentional_static",
+      "path": "media/test_challenge_2_intentional_static.mp4",
+      "sha256": "fe63187b70ab18add3cab90648f4102aa5779d0af3b7520fa46c6cf8221bde78",
+      "truth": [],
+      "reference_origin": "constructed_truth",
+      "normal_counterexample": true,
+      "intent": "Legitimate camera/light/stillness change"
+    },
+    {
+      "clip_id": "test_challenge_2_fade",
+      "source_group": "test_challenge_2",
+      "split": "test",
+      "kind": "fade",
+      "path": "media/test_challenge_2_fade.mp4",
+      "sha256": "875669dfa6ae5bb8a521531fa845bad9299520e109577f57cbdc759cc842909d",
+      "truth": [],
+      "reference_origin": "constructed_truth",
+      "normal_counterexample": true,
+      "intent": "Legitimate camera/light/stillness change"
+    },
+    {
+      "clip_id": "test_challenge_2_cut_near_flash",
+      "source_group": "test_challenge_2",
+      "split": "test",
+      "kind": "cut_near_flash",
+      "path": "media/test_challenge_2_cut_near_flash.mp4",
+      "sha256": "8d4f2020612f30dba01afff94ddadf695b647c20c47e742185b83a83f1d12aca",
+      "truth": [
+        {
+          "type": "shot_cut_candidate",
+          "start_s": 2.0,
+          "end_s": 2.0833333333333335
+        },
+        {
+          "type": "brightness_jump",
+          "start_s": 2.0833333333333335,
+          "end_s": 2.25
+        }
+      ],
+      "reference_origin": "constructed_truth",
+      "normal_counterexample": false,
+      "intent": "Cut with adjacent injected flash"
+    }
+  ],
+  "timing_only": [
+    {
+      "path": "media/timing_offset5.mp4",
+      "sha256": "ba47d5189010c7192dd8b6f399c7b2c000fa52e871a526c833faa329c278b8d5"
+    },
+    {
+      "path": "media/timing_vfr.mp4",
+      "sha256": "a899e9fed7e33b3c831f24e96193110fce81f04a30467d42e9665618b30ca9a0"
+    },
+    {
+      "path": "media/timing_single_frame.mp4",
+      "sha256": "ca80c292f722c3dcba687de8806f3f3cf55fcfe52fcfa5c36500f6a6eba3ef56"
+    }
+  ],
+  "diagnostic_challenge": {
+    "path": "media/intentional_static.mp4",
+    "sha256": "306b0703bf8b06727a8c5503a4427a79b3b9646a391e823a93c6929cf6023e98",
+    "meaning": "Intentional still shot; a freeze candidate is not a quality defect"
+  },
+  "source_design": "Group seeds change trajectory speed/start/vertical phase, object size/color and background; not merely file names or color-only copies; two additional challenge source groups, each with six correlated variants",
+  "limitations": [
+    "Controlled geometric and textured renders only; no real model output or human-quality reference.",
+    "Six declared source groups in total; four test groups. Source grouping is declared, not proof of statistical independence.",
+    "Intentional stillness has no defect label but legitimately produces a low-MAE freeze candidate.",
+    "Cut-adjacent flashes expose the frozen cut-guard recall tradeoff."
+  ],
+  "protocol_revision": "v2-exploratory-fixed-suite-1",
+  "test_status": "exploratory_regression_suite; inspected during engineering, not blind generalization test"
+}

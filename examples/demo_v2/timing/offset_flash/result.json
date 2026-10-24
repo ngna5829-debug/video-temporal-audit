@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "project_id": "video-temporal-audit",
+  "operation": "analyze",
+  "status": "completed",
+  "input_digest": "07506b73de9fd02db963c2ea5567e8d233615610fadb6d741cabb6179091f517",
+  "config_digest": "194d4474cae6463dfef77af17d8b692066c5b2b1dbef753e92617a12f3fccea7",
+  "evaluator_version": "0.2.0",
+  "artifacts": [
+    {
+      "path": "evidence/E001_f00023.png",
+      "sha256": "5d175e3f746995ffeb226d4d28847e09fcfef9e296da1c2bfb5cb85dbe5ba009",
+      "type": "png"
+    },
+    {
+      "path": "evidence/E001_f00024.png",
+      "sha256": "ee433ce7799bf8724aedba477413951557ade4b4a6eb07f42912bab2db11601e",
+      "type": "png"
+    },
+    {
+      "path": "evidence/E001_f00026.png",
+      "sha256": "4affe6e289a2007900e66891e0952f5e131e30426471cffa1b88a798e9746afd",
+      "type": "png"
+    },
+    {
+      "path": "frames.csv",
+      "sha256": "38fda18780d59399dae20653d6d1ff6f76a81e0331b95b0a4de7080b7edf4bfd",
+      "type": "csv"
+    },
+    {
+      "path": "preview.mp4",
+      "sha256": "61de8b48ef6c463ebb5af433abee7f86f839f1a8fa12d8eb0f2464ff85308cc9",
+      "type": "mp4"
+    },
+    {
+      "path": "report.json",
+      "sha256": "28dd3098c9eb33e9d4c5de8fa56084cab8c2d1fe90ef247365d50cf30f818bbc",
+      "type": "json"
+    },
+    {
+      "path": "timeline.html",
+      "sha256": "48d10391fd73ff5662d643db03c8de968589499f606f7614c019d6b504e7ac00",
+      "type": "html"
+    }
+  ],
+  "counts": {
+    "frames": 48,
+    "events": 1,
+    "reviewed": 0
+  },
+  "warnings": [
+    "程序完成与视频质量结论不同；候选仍需人工复核。",
+    "源末帧没有正的显示时长；分析结束时间使用相邻 PTS 间隔中位数估计，预览按该估计显示末帧。"
+  ]
+}

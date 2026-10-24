@@ -1,0 +1,357 @@
+{
+  "event_test": {
+    "schema_version": 1,
+    "split": "test",
+    "clips": 8,
+    "source_groups": [
+      "test_source_1",
+      "test_source_2"
+    ],
+    "config": {
+      "freeze_mae": 0.1,
+      "freeze_min_s": 0.4,
+      "brightness_jump": 20.0,
+      "cut_structure_mae": 10.0,
+      "cut_guard_s": 0.2,
+      "flash_merge_gap_s": 0.25
+    },
+    "config_digest": "f729e391a3dc0468a2ce59474cd2ec6d99be550043d41146db949ac59bb0ee8e",
+    "calibration_fingerprint": "cedd5272b6dde0019e2846527a03edcd6e33ee84be291044b1132ad98f910a5c",
+    "evaluator_version": "0.1.1",
+    "dataset_sha256": "316d21dfc2d5966719e6f6c55eae6f27cfcd1f8de42ac306a49b2e055456b146",
+    "baseline_no_cut_guard": {
+      "tp": 6,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "matching": "same-video, same-type, greedy descending temporal IoU, one-to-one",
+      "temporal_iou_threshold": 0.3,
+      "by_type": {
+        "freeze_candidate": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "brightness_jump": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "shot_cut_candidate": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "clips": [
+        {
+          "clip_id": "test_source_1_normal",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_source_1_freeze",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999996923076925
+            }
+          ],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_1_flicker",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.6666666666666661
+            }
+          ],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_1_cut",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 1,
+              "truth_index": 0,
+              "temporal_iou": 0.9999959999999994
+            }
+          ],
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_2_normal",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_source_2_freeze",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999996923076925
+            }
+          ],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_2_flicker",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.6666666666666661
+            }
+          ],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_2_cut",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 1,
+              "truth_index": 0,
+              "temporal_iou": 0.9999959999999994
+            }
+          ],
+          "precision": 0.5,
+          "recall": 1.0
+        }
+      ]
+    },
+    "shot_aware": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "matching": "same-video, same-type, greedy descending temporal IoU, one-to-one",
+      "temporal_iou_threshold": 0.3,
+      "by_type": {
+        "freeze_candidate": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "brightness_jump": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "shot_cut_candidate": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "clips": [
+        {
+          "clip_id": "test_source_1_normal",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_source_1_freeze",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999996923076925
+            }
+          ],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_1_flicker",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.6666666666666661
+            }
+          ],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_1_cut",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999959999999994
+            }
+          ],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_2_normal",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_source_2_freeze",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999996923076925
+            }
+          ],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_2_flicker",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.6666666666666661
+            }
+          ],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_2_cut",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999959999999994
+            }
+          ],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      ]
+    },
+    "normal_clip_false_candidates": [
+      {
+        "clip_id": "test_source_1_normal",
+        "false_candidate_count": 0
+      },
+      {
+        "clip_id": "test_source_2_normal",
+        "false_candidate_count": 0
+      }
+    ],
+    "claim_scope": "CONTROLLED_SYNTHETIC_MP4_ONLY; not model-quality scores or population estimates",
+    "limits": [
+      "Only two held-out source groups, same drawing family",
+      "Variants inside each source group are correlated",
+      "Hard cuts may suppress nearby real flashes; fades or camera motions can look like cuts",
+      "Freeze flags cannot distinguish intentional stillness from decoder/generation failure"
+    ]
+  },
+  "timing_boundary_checks": {
+    "offset5": {
+      "frame_count": 48,
+      "first_pts": 5.0,
+      "last_pts": 8.916667,
+      "last_duration_source": "median_delta_ESTIMATE"
+    },
+    "vfr": {
+      "frame_count": 48,
+      "first_pts": 0.0,
+      "last_pts": 5.833333,
+      "last_duration_source": "median_delta_ESTIMATE",
+      "distinct_positive_deltas": [
+        0.0833,
+        0.1666,
+        0.1667
+      ]
+    },
+    "single_frame": {
+      "frame_count": 1,
+      "first_pts": 0.0,
+      "last_pts": 0.0,
+      "last_duration_source": "showinfo_duration"
+    }
+  },
+  "actual_model_calls": 0,
+  "scope": "Controlled CPU encode/decode and diagnostics; not generated-video quality",
+  "intentional_static_challenge": {
+    "freeze_candidates": 1,
+    "interpretation": "Intentional stillness is flagged; do not equate a candidate with a defect"
+  }
+}

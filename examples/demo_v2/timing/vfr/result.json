@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "project_id": "video-temporal-audit",
+  "operation": "analyze",
+  "status": "completed",
+  "input_digest": "a899e9fed7e33b3c831f24e96193110fce81f04a30467d42e9665618b30ca9a0",
+  "config_digest": "194d4474cae6463dfef77af17d8b692066c5b2b1dbef753e92617a12f3fccea7",
+  "evaluator_version": "0.2.0",
+  "artifacts": [
+    {
+      "path": "frames.csv",
+      "sha256": "3a52fc8561aaab1640a3d45fea19f0b71af4b42ab93669f1f1809030dc952fd5",
+      "type": "csv"
+    },
+    {
+      "path": "preview.mp4",
+      "sha256": "a752587bc84d72742a57b8a9771f8ab9e0208c013182867b62b7b9e98674c846",
+      "type": "mp4"
+    },
+    {
+      "path": "report.json",
+      "sha256": "91028278a37212fadc9ae201b57801be9332685ed4ad7c9a66cf690dca4fe744",
+      "type": "json"
+    },
+    {
+      "path": "timeline.html",
+      "sha256": "f1dbfaec05f8e376f525a67e46bef0075703c8301eac7306a7ebab97cf10f274",
+      "type": "html"
+    }
+  ],
+  "counts": {
+    "frames": 48,
+    "events": 0,
+    "reviewed": 0
+  },
+  "warnings": [
+    "程序完成与视频质量结论不同；候选仍需人工复核。",
+    "源末帧没有正的显示时长；分析结束时间使用相邻 PTS 间隔中位数估计，预览按该估计显示末帧。"
+  ]
+}

@@ -1,0 +1,138 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; media-src 'self' blob:; style-src 'unsafe-inline'; script-src 'sha256-reXWXs8D73lYZrCm3d6dzNHESy+XlzZUU0Jb26j+fgo='; connect-src 'self' blob:"><title>视频时序复核 · test_challenge_2_intentional_static</title>
+<style>*{box-sizing:border-box}:focus-visible{outline:3px solid #c17c00;outline-offset:3px}input[type=file]{display:block;max-width:100%;width:100%;font:inherit}.file-control{max-width:100%}body{font:16px/1.65 system-ui,-apple-system,sans-serif;max-width:1160px;margin:auto;padding:28px;background:#edf2f7;color:#17283e}h1{margin-bottom:8px}h2{font-size:20px}p{margin:10px 0}.summary,.player,.event{background:white;border:1px solid #d9e3ef;border-radius:12px;padding:22px;margin:18px 0}.eyebrow{color:#326a86;font-size:13px;font-weight:650}.note{color:#586a7b;font-size:14px}video{width:100%;max-height:430px;background:#14283e}.track{height:32px;background:#dbe4ef;position:relative;margin:16px 0}.bar{position:absolute;height:32px;background:#bc612f;opacity:.8;border:1px solid white;padding:0;min-width:4px}button,.button{border:0;border-radius:6px;background:#245c79;color:white;padding:9px 14px;cursor:pointer;font:inherit}.event-title,.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.event-title h2{flex:1}.frames{display:flex;flex-wrap:wrap;gap:12px}figure{margin:0;flex:1;min-width:220px}img{width:100%;max-width:320px}figcaption{font-size:12px;color:#52657b}.review{display:grid;grid-template-columns:200px 1fr;gap:18px;margin-top:18px}select,textarea{display:block;width:100%;box-sizing:border-box;padding:10px;border:1px solid #aebfd0;border-radius:5px;font:inherit}textarea{min-height:85px}code{font-size:12px;word-break:break-all}#status{color:#205c52;font-weight:600}a{color:#176080}.error{color:#a73030!important}.selected{outline:3px solid #60a8c7}@media(max-width:650px){body{padding:12px}.review{grid-template-columns:1fr}}</style></head><body>
+<div class="eyebrow">VIDEO TEMPORAL AUDIT · v2 · 本地复核</div><h1>定位需要回看的视频时段</h1>
+<div class="summary"><b>分析已完成：48 帧，发现 1 个候选时段。</b><p>请点击候选回放，并记录“确认是问题 / 合法变化 / 证据不足”。静止镜头或有意闪光可以是合法变化；候选数量不等于视频缺陷数量。</p>
+<p>test_challenge_2_intentional_static.mp4 · 源首帧 0.000000 秒 · 分析时段 4.000000 秒 · 运动补偿：开启</p><p class="note">全局运动估计成功 47/47 对；失败 0 对时回退原始结构差。冻结始终使用原始相邻帧变化。</p>
+<details><summary>输入与规则绑定</summary><p>源媒体 SHA-256 <code>fe63187b70ab18add3cab90648f4102aa5779d0af3b7520fa46c6cf8221bde78</code></p><p>配置摘要 <code>194d4474cae6463dfef77af17d8b692066c5b2b1dbef753e92617a12f3fccea7</code></p><p>复核绑定 <code>356d63c229d33a1b7e1597cb2157fc5224ef843d00d9d52c3cc25e95e1be9e2a</code></p><p>预览已逐帧核验：最大映射误差 0.00000000 秒。预览结束 4.000000 秒，末帧显示时长已核验。预览去除音轨，不能用来评价音画同步。</p></details></div>
+<div class="player"><video id="video" controls preload="metadata" src="preview.mp4"></video><p id="playhead">播放器位置 0.000000 秒 · 源 PTS 0.000000 秒</p><p class="note">预览时间 = 源 PTS − 0.000000 秒。事件回放提前 0.5 秒。原始 VFR 间隔保留，不按帧号除帧率换算。</p>
+<div class="toolbar"><label class="file-control">核验并切换本机原片<input id="media-file" type="file" accept="video/*"></label><button id="restore-preview">使用附带预览</button></div><p id="media-status" class="note">正在使用已核验时间映射的附带预览；文件不会上传。</p><div class="track"><button class="bar" data-event="E001" style="left:0.000%;width:100.000%" aria-label="回放 E001 静止候选" title="E001 静止候选"></button></div></div>
+<div class="toolbar"><button id="save-draft">保存本机草稿</button><button id="export-reviews">导出已完成复核 JSONL</button><label class="file-control">导回复核 JSONL<input id="import-reviews" type="file" accept=".jsonl,.json"></label></div><p id="status" role="status" aria-live="polite">草稿仅保存在当前浏览器；导出后才能交付或通过 CLI 生成正式复核版报告。</p>
+<section id="E001" class="event"><div class="event-title"><h2>E001 · 静止候选</h2><button data-event="E001">回放此时段</button></div>
+<p>播放器位置 <b>0.000000–4.000000 秒</b> · 源 PTS <b>0.000000–4.000000 秒</b></p>
+<div class="frames"><figure><a href="evidence/E001_f00000.png"><img src="evidence/E001_f00000.png" alt="E001 第0帧证据"></a><figcaption>第 0 帧 · 源 PTS 0.000000 秒</figcaption></figure><figure><a href="evidence/E001_f00023.png"><img src="evidence/E001_f00023.png" alt="E001 第23帧证据"></a><figcaption>第 23 帧 · 源 PTS 1.916667 秒</figcaption></figure><figure><a href="evidence/E001_f00047.png"><img src="evidence/E001_f00047.png" alt="E001 第47帧证据"></a><figcaption>第 47 帧 · 源 PTS 3.916667 秒</figcaption></figure></div><div class="review"><label>复核结论 <select id="decision-E001"><option value="">尚未复核</option><option value="confirmed">确认是问题</option><option value="intentional">合法变化</option><option value="uncertain">证据不足</option></select></label><label>具体画面依据 <textarea id="evidence-E001" maxlength="4000" placeholder="写明时间和实际观察；合法静止也请说明。"></textarea></label></div></section>
+<p class="note">本工具不判断身份保持、物理规律、口型或音轨。解码成功与视频质量通过是两回事。</p><p><a href="report.json">完整 JSON</a> · <a href="frames.csv">逐帧诊断 CSV</a> · <a href="result.json">执行与工件摘要</a></p><script>window.AUDIT_DATA={"clip_id": "test_challenge_2_intentional_static", "input_sha256": "fe63187b70ab18add3cab90648f4102aa5779d0af3b7520fa46c6cf8221bde78", "config_digest": "194d4474cae6463dfef77af17d8b692066c5b2b1dbef753e92617a12f3fccea7", "report_digest": "356d63c229d33a1b7e1597cb2157fc5224ef843d00d9d52c3cc25e95e1be9e2a", "source_start_s": 0.0, "source_end_s": 4.0000003, "events": [{"type": "freeze_candidate", "start_s": 0.0, "end_s": 4.0000003, "frame_indices": [0, 23, 47], "score": 0.0027179205790162086, "event_id": "E001", "evidence_frames": [{"file": "evidence/E001_f00000.png", "source_index": 0, "source_pts_s": 0.0}, {"file": "evidence/E001_f00023.png", "source_index": 23, "source_pts_s": 1.916667}, {"file": "evidence/E001_f00047.png", "source_index": 47, "source_pts_s": 3.916667}], "playback_start_s": 0.0, "playback_end_s": 4.0000003}], "preview": {"file": "preview.mp4", "sha256": "0f6909e4df70cde7025c998cc0db2faa50243f5babbc8367f3a5c880dfe7fb3a", "source_sha256": "fe63187b70ab18add3cab90648f4102aa5779d0af3b7520fa46c6cf8221bde78", "mapping": "preview_pts_s = source_pts_s - source_start_s", "source_start_s": 0.0, "frame_count": 48, "max_pts_mapping_error_s": 0.0, "validation_tolerance_s": 3e-05, "source_relative_end_s": 4.0000003, "preview_end_s": 4.0000003, "end_mapping_error_s": 0.0, "last_duration_mapping_error_s": 0.0, "source_last_duration_s": 0.0833333, "preview_last_duration_s": 0.0833333, "source_last_duration_source": "showinfo_duration", "preview_last_duration_source": "showinfo_duration", "source_end_is_estimated": false, "source_relative_frame_pts_s": [0.0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667, 1.0, 1.083333, 1.166667, 1.25, 1.333333, 1.416667, 1.5, 1.583333, 1.666667, 1.75, 1.833333, 1.916667, 2.0, 2.083333, 2.166667, 2.25, 2.333333, 2.416667, 2.5, 2.583333, 2.666667, 2.75, 2.833333, 2.916667, 3.0, 3.083333, 3.166667, 3.25, 3.333333, 3.416667, 3.5, 3.583333, 3.666667, 3.75, 3.833333, 3.916667], "preview_frame_pts_s": [0.0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667, 1.0, 1.083333, 1.166667, 1.25, 1.333333, 1.416667, 1.5, 1.583333, 1.666667, 1.75, 1.833333, 1.916667, 2.0, 2.083333, 2.166667, 2.25, 2.333333, 2.416667, 2.5, 2.583333, 2.666667, 2.75, 2.833333, 2.916667, 3.0, 3.083333, 3.166667, 3.25, 3.333333, 3.416667, 3.5, 3.583333, 3.666667, 3.75, 3.833333, 3.916667], "audio": "omitted; visual timing review only", "codec": "H.264/yuv420p; VFR passthrough; final packet duration explicitly set from analysis timeline", "single_frame_duration_s": null}, "human_reviews": []};
+/* Offline review protocol; no network requests or automatic human labels. */
+function reviewBinding(data) {
+  return {schema_version:'video-temporal-review-v2', clip_id:data.clip_id,
+    media_sha:data.input_sha256, config_digest:data.config_digest, report_digest:data.report_digest};
+}
+function validateReviewRows(rows, data) {
+  if (!Array.isArray(rows) || !rows.length) throw new Error('文件没有已完成的复核条目。');
+  const binding=reviewBinding(data), events=new Set(data.events.map(e=>e.event_id)), seen=new Set();
+  const fields=[...Object.keys(binding),'event_id','decision','evidence'].sort().join(',');
+  for (const row of rows) {
+    if (!row || Object.keys(row).sort().join(',')!==fields) throw new Error('复核文件字段不匹配。');
+    for (const [key,value] of Object.entries(binding)) if(row[key]!==value) throw new Error('复核属于另一条视频、事件或规则；未导入任何条目。');
+    if(!events.has(row.event_id)||seen.has(row.event_id)) throw new Error('事件编号不存在或重复。');
+    seen.add(row.event_id);
+    if(!['confirmed','intentional','uncertain'].includes(row.decision)) throw new Error('结论值无效。');
+    if(typeof row.evidence!=='string'||!row.evidence.trim()||row.evidence.length>4000) throw new Error('每项复核都需要 1–4000 字的具体依据。');
+  }
+  return rows;
+}
+function sourceToPlayback(sourcePts, sourceStart) { return sourcePts-sourceStart; }
+if (typeof module!=='undefined') module.exports={reviewBinding,validateReviewRows,sourceToPlayback};
+if (typeof document!=='undefined') {
+  const data=window.AUDIT_DATA, binding=reviewBinding(data), video=document.getElementById('video');
+  const status=document.getElementById('status'), key='video-audit-v2:'+data.report_digest;
+  let mediaUrl=null, previewLoading=false;
+  async function bindPackagedPreview() {
+    if(mediaUrl)URL.revokeObjectURL(mediaUrl);mediaUrl=null;
+    if(!['http:','https:'].includes(location.protocol)) {
+      video.src=data.preview.file;return;
+    }
+    previewLoading=true;
+    document.getElementById('media-status').textContent='正在读取并核验预览；随后使用本机 Blob 支持可靠跳转，无需服务器 Range。';
+    try {
+      const head=await fetch(data.preview.file,{method:'HEAD',cache:'no-store'});
+      if(head.ok&&head.headers.get('Accept-Ranges')==='bytes') {
+        video.src=data.preview.file;
+        document.getElementById('media-status').textContent='本机服务支持视频 Range，已启用按需播放；预览摘要与逐帧时间映射见报告绑定。';
+        return;
+      }
+      const maxBytes=64*1024*1024;
+      const declaredSize=Number(head.headers.get('Content-Length'));
+      if(declaredSize>maxBytes)throw new Error('预览超过 64 MiB；请使用 video_temporal_audit serve 服务支持按需跳转，或选择本机原片。');
+      const response=await fetch(data.preview.file,{cache:'no-store'});
+      if(!response.ok)throw new Error('预览读取失败：HTTP '+response.status);
+      const reader=response.body.getReader(),chunks=[];let total=0;
+      while(true){const {value,done}=await reader.read();if(done)break;total+=value.byteLength;if(total>maxBytes){await reader.cancel();throw new Error('预览超过 64 MiB，已停止缓存；请使用 serve 服务。');}chunks.push(value);}
+      const bytes=new Uint8Array(total);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.byteLength;}
+      if(!crypto.subtle)throw new Error('当前环境无法计算摘要，请使用 localhost 或本机文件打开报告。');
+      const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(x=>x.toString(16).padStart(2,'0')).join('');
+      if(hash!==data.preview.sha256)throw new Error('预览 SHA-256 不匹配，已停止播放；请重新生成报告。');
+      mediaUrl=URL.createObjectURL(new Blob([bytes],{type:'video/mp4'}));video.src=mediaUrl;
+      document.getElementById('media-status').textContent='预览 SHA-256 已核验；本机 Blob 播放已启用，可定位回看。文件不会上传。';
+    }catch(error){video.removeAttribute('src');video.load();document.getElementById('media-status').textContent=error.message;}
+    finally{previewLoading=false;}
+  }
+  function notice(message,error=false) { status.textContent=message; status.classList.toggle('error',error); }
+  function draftRows() { return data.events.map(e=>({...binding,event_id:e.event_id,
+      decision:document.getElementById('decision-'+e.event_id).value,
+      evidence:document.getElementById('evidence-'+e.event_id).value})); }
+  function applyRows(rows) { for(const row of rows) { const select=document.getElementById('decision-'+row.event_id), note=document.getElementById('evidence-'+row.event_id); if(select&&note){ select.value=row.decision;note.value=row.evidence; } } }
+  function saveDraft() { try { localStorage.setItem(key,JSON.stringify({binding,rows:draftRows()}));notice('本机草稿已保存。请导出 JSONL 留存或通过 CLI 生成正式复核版报告。'); } catch(e){notice('浏览器未允许本机草稿保存。请导出 JSONL 留存。',true);} }
+  applyRows(data.human_reviews||[]);
+  try {
+    const saved=JSON.parse(localStorage.getItem(key)||'null');
+    if(saved && JSON.stringify(saved.binding)===JSON.stringify(binding) && Array.isArray(saved.rows)) {
+      const eventIds=new Set(data.events.map(e=>e.event_id));
+      if(saved.rows.every(r=>eventIds.has(r.event_id)&&['','confirmed','intentional','uncertain'].includes(r.decision)&&typeof r.evidence==='string')) {
+        applyRows(saved.rows);notice('已恢复本机草稿。正式复核版仍需导出并导回 CLI。');
+      }
+    }
+  } catch(e) { notice('未能恢复草稿；可导回之前导出的 JSONL。',true); }
+  document.querySelectorAll('select,textarea').forEach(el=>el.addEventListener('input',saveDraft));
+  document.getElementById('save-draft').addEventListener('click',saveDraft);
+  video.addEventListener('timeupdate',()=> {document.getElementById('playhead').textContent=`播放器位置 ${video.currentTime.toFixed(6)} 秒 · 源 PTS ${(video.currentTime+data.source_start_s).toFixed(6)} 秒`;});
+  video.addEventListener('error',()=> { document.getElementById('media-status').textContent='浏览器无法播放该视频；请在本机播放器按源 PTS 回看。播放失败不能记为视频质量缺陷。'; });
+  document.querySelectorAll('[data-event]').forEach(button=>button.addEventListener('click',()=> {
+    const event=data.events.find(e=>e.event_id===button.dataset.event);
+    const seek=Math.max(0,sourceToPlayback(event.start_s,data.source_start_s)-.5);
+    if(previewLoading){document.getElementById('media-status').textContent='预览仍在核验，完成后请再点回放。';return;}
+    const label=document.getElementById('media-status');
+    const play=()=>{
+      video.pause();label.textContent=`正在定位 ${event.event_id}：目标播放 ${seek.toFixed(6)} 秒。`;
+      let finished=false;
+      const verify=()=>{
+        if(finished)return;finished=true;video.removeEventListener('seeked',verify);
+        if(Math.abs(video.currentTime-seek)>.05){label.textContent='播放器未定位到目标时刻；请检查本机媒体或重新加载预览。';return;}
+        label.textContent=`已定位 ${event.event_id}：播放 ${video.currentTime.toFixed(6)} 秒；事件源 PTS ${event.start_s.toFixed(6)} 秒。`;
+        video.play().catch(()=>{label.textContent+=' 请点击播放器的播放按钮继续。';});
+      };
+      video.addEventListener('seeked',verify);
+      video.currentTime=seek;
+      if(Math.abs(video.currentTime-seek)<=.05&&!video.seeking)verify();
+      setTimeout(()=>{if(!finished){finished=true;video.removeEventListener('seeked',verify);label.textContent='尚未确认播放器跳转，请重新加载附带预览或选择已核验原片；不能将此状态记成已定位。';}},3000);
+    };
+    if(video.readyState>=1)play();else video.addEventListener('loadedmetadata',play,{once:true});
+    document.querySelectorAll('.event').forEach(el=>el.classList.toggle('selected',el.id===event.event_id));
+  }));
+  document.getElementById('export-reviews').addEventListener('click',()=> {
+    try {
+      const all=draftRows(), selected=all.filter(r=>r.decision);
+      validateReviewRows(selected,data);
+      const payload=selected.map(r=>JSON.stringify(r)).join('\n')+'\n';
+      const blob=new Blob([payload],{type:'application/x-ndjson;charset=utf-8'}), url=URL.createObjectURL(blob), a=document.createElement('a');
+      a.href=url;a.download=data.clip_id+'_'+data.report_digest.slice(0,8)+'_reviews.jsonl';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+      notice(`已导出 ${selected.length}/${all.length} 项；未选择的 ${all.length-selected.length} 项仍待复核。文件导出不代表已通过 CLI 导入。`);
+    }catch(e){notice(e.message,true);}
+  });
+  document.getElementById('import-reviews').addEventListener('change',async event=> {
+    try { const file=event.target.files[0];if(!file)return;const rows=(await file.text()).split(/\r?\n/).filter(line=>line.trim()).map(line=>JSON.parse(line));validateReviewRows(rows,data);applyRows(rows);saveDraft();notice(`已校验并导回 ${rows.length} 项本机草稿；正式报告请运行 import-reviews。`); }catch(e){notice(e.message,true);}finally{event.target.value='';}
+  });
+  document.getElementById('media-file').addEventListener('change',async event=> {
+    const file=event.target.files[0];if(!file)return;
+    try {
+      if(!crypto.subtle)throw new Error('本浏览器无法计算文件摘要。请通过 localhost 打开报告，或使用已核验的附带预览。');
+      const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',await file.arrayBuffer()))].map(x=>x.toString(16).padStart(2,'0')).join('');
+      if(hash!==data.input_sha256&&hash!==data.preview.sha256)throw new Error('所选文件 SHA-256 不匹配；播放器继续使用原来的视频。');
+      if(mediaUrl)URL.revokeObjectURL(mediaUrl);mediaUrl=URL.createObjectURL(file);video.src=mediaUrl;
+      document.getElementById('media-status').textContent='已核验媒体 SHA-256；使用本机文件，不上传。';
+    }catch(e){document.getElementById('media-status').textContent=e.message;}
+  });
+  document.getElementById('restore-preview').addEventListener('click',bindPackagedPreview);
+  bindPackagedPreview();
+}
+</script></body></html>

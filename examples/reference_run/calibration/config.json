@@ -1,0 +1,126 @@
+{
+  "schema_version": "video-temporal-audit-calibration-v1",
+  "evaluator_version": "0.1.1",
+  "config": {
+    "freeze_mae": 0.1,
+    "freeze_min_s": 0.4,
+    "brightness_jump": 20.0,
+    "cut_structure_mae": 10.0,
+    "cut_guard_s": 0.2,
+    "flash_merge_gap_s": 0.25
+  },
+  "calibration_fingerprint": "cedd5272b6dde0019e2846527a03edcd6e33ee84be291044b1132ad98f910a5c",
+  "calibration_inputs": [
+    {
+      "clip_id": "calibration_source_1_cut",
+      "source_group": "calibration_source_1",
+      "split": "calibration",
+      "kind": "cut",
+      "path": "media/calibration_source_1_cut.mp4",
+      "sha256": "7b9b1ce389dc0eb605e2957f50cd8447b90a2a2f23eade6a588ab090d5b385ef",
+      "truth": [
+        {
+          "type": "shot_cut_candidate",
+          "start_s": 2.0,
+          "end_s": 2.0833333333333335
+        }
+      ]
+    },
+    {
+      "clip_id": "calibration_source_1_flicker",
+      "source_group": "calibration_source_1",
+      "split": "calibration",
+      "kind": "flicker",
+      "path": "media/calibration_source_1_flicker.mp4",
+      "sha256": "9f4def7250cbd07dba34ba4609cb731594228f7599d86fb541fc6974e51bde0e",
+      "truth": [
+        {
+          "type": "brightness_jump",
+          "start_s": 2.0,
+          "end_s": 2.1666666666666665
+        }
+      ]
+    },
+    {
+      "clip_id": "calibration_source_1_freeze",
+      "source_group": "calibration_source_1",
+      "split": "calibration",
+      "kind": "freeze",
+      "path": "media/calibration_source_1_freeze.mp4",
+      "sha256": "149fc19fd4cb19923bb642ba0a1b766fc69ff5e3a5cf5a3adee51c722a16998d",
+      "truth": [
+        {
+          "type": "freeze_candidate",
+          "start_s": 1.4166666666666667,
+          "end_s": 2.5
+        }
+      ]
+    },
+    {
+      "clip_id": "calibration_source_1_normal",
+      "source_group": "calibration_source_1",
+      "split": "calibration",
+      "kind": "normal",
+      "path": "media/calibration_source_1_normal.mp4",
+      "sha256": "b4c20215614ed11434afdcc42529df5f36ef1e5ff2f70206e719c47502e1d168",
+      "truth": []
+    },
+    {
+      "clip_id": "calibration_source_2_cut",
+      "source_group": "calibration_source_2",
+      "split": "calibration",
+      "kind": "cut",
+      "path": "media/calibration_source_2_cut.mp4",
+      "sha256": "6d69d8e6a70a8284ab71e4e798e6a7d3b81af0b76243e2c74eff1dd8c0239b40",
+      "truth": [
+        {
+          "type": "shot_cut_candidate",
+          "start_s": 2.0,
+          "end_s": 2.0833333333333335
+        }
+      ]
+    },
+    {
+      "clip_id": "calibration_source_2_flicker",
+      "source_group": "calibration_source_2",
+      "split": "calibration",
+      "kind": "flicker",
+      "path": "media/calibration_source_2_flicker.mp4",
+      "sha256": "460be448e04e60a4e43c979ddae076e8b06046262edd4aa2adaec7b3b8268914",
+      "truth": [
+        {
+          "type": "brightness_jump",
+          "start_s": 2.0,
+          "end_s": 2.1666666666666665
+        }
+      ]
+    },
+    {
+      "clip_id": "calibration_source_2_freeze",
+      "source_group": "calibration_source_2",
+      "split": "calibration",
+      "kind": "freeze",
+      "path": "media/calibration_source_2_freeze.mp4",
+      "sha256": "f384d2d5b118aa39950add66e789ea1a75d3f1bb4eacfab1b88aae8646e76e9e",
+      "truth": [
+        {
+          "type": "freeze_candidate",
+          "start_s": 1.4166666666666667,
+          "end_s": 2.5
+        }
+      ]
+    },
+    {
+      "clip_id": "calibration_source_2_normal",
+      "source_group": "calibration_source_2",
+      "split": "calibration",
+      "kind": "normal",
+      "path": "media/calibration_source_2_normal.mp4",
+      "sha256": "403f83fba8edbccc2d775b798d2287b02726ff1e26b644ef42f80962d31af9f4",
+      "truth": []
+    }
+  ],
+  "selection_split": "calibration",
+  "matching_tiou_threshold": 0.3,
+  "config_digest": "f729e391a3dc0468a2ce59474cd2ec6d99be550043d41146db949ac59bb0ee8e"
+}

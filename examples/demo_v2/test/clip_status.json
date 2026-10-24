@@ -1,0 +1,102 @@
+[
+  {
+    "clip_id": "test_source_1_normal",
+    "source_group": "test_source_1",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_source_1_freeze",
+    "source_group": "test_source_1",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_source_1_flicker",
+    "source_group": "test_source_1",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_source_1_cut",
+    "source_group": "test_source_1",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_source_2_normal",
+    "source_group": "test_source_2",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_source_2_freeze",
+    "source_group": "test_source_2",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_source_2_flicker",
+    "source_group": "test_source_2",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_source_2_cut",
+    "source_group": "test_source_2",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_challenge_1_pan",
+    "source_group": "test_challenge_1",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_challenge_1_zoom",
+    "source_group": "test_challenge_1",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_challenge_1_low_texture_motion",
+    "source_group": "test_challenge_1",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_challenge_1_intentional_static",
+    "source_group": "test_challenge_1",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_challenge_1_fade",
+    "source_group": "test_challenge_1",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_challenge_1_cut_near_flash",
+    "source_group": "test_challenge_1",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_challenge_2_pan",
+    "source_group": "test_challenge_2",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_challenge_2_zoom",
+    "source_group": "test_challenge_2",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_challenge_2_low_texture_motion",
+    "source_group": "test_challenge_2",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_challenge_2_intentional_static",
+    "source_group": "test_challenge_2",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_challenge_2_fade",
+    "source_group": "test_challenge_2",
+    "status": "success"
+  },
+  {
+    "clip_id": "test_challenge_2_cut_near_flash",
+    "source_group": "test_challenge_2",
+    "status": "success"
+  }
+]

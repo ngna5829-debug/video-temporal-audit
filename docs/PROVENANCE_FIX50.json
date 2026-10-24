@@ -1,0 +1,53 @@
+{
+  "schema_version": "source-provenance-fix50-v1",
+  "checked_date": "2026-10-24",
+  "scope": "Metadata provenance branch; actual local CPU fixtures, no natural-data validation or human ratings.",
+  "python_test_methods": 60,
+  "test_exit_code": 0,
+  "command_wall_seconds": 15.107299666000472,
+  "changed_files": [
+    {
+      "path": "video_temporal_audit/evaluation.py",
+      "before_sha": "cac14fcb2601d80157753062e37d5338d23f22b5b53210eadf4a19d20f70f70d",
+      "after_sha": "e18513474a4b7983794e9fe5b7113c96cbc9249b5daef6a3b4d47bd7e95d6b55"
+    },
+    {
+      "path": "tests/test_v2.py",
+      "before_sha": "10b56a6d049daa4d5c834c28186be8d7f8c9c21a477bfa5390dcbff4852b4eee",
+      "after_sha": "1d034f14b7969980a355711915e91564e3011095c5a3da7a4cb475e3dafae008"
+    }
+  ],
+  "controlled_calibration_byte_equal": true,
+  "controlled_calibration_files": [
+    {
+      "name": "config.json",
+      "old_sha": "847e1fe9633684b082cfb3434424fc0806688cfd8709c75516e8683e44d409be",
+      "new_sha": "847e1fe9633684b082cfb3434424fc0806688cfd8709c75516e8683e44d409be",
+      "byte_equal": true
+    },
+    {
+      "name": "calibration.json",
+      "old_sha": "65d25c99ea21118d4a5c925a2e416e4fa9a1dd2e66fd7a22d3687da1f8a24d09",
+      "new_sha": "65d25c99ea21118d4a5c925a2e416e4fa9a1dd2e66fd7a22d3687da1f8a24d09",
+      "byte_equal": true
+    }
+  ],
+  "controlled_test_metrics_byte_equal": true,
+  "controlled_test_metrics_sha256": "5dae9b603af66fd00395528c9ee445ee4de631f1b41725afec1200dbbc4d0c45",
+  "user_data_branch": {
+    "summary_reference": "human_unverified",
+    "per_clip_reference": "human_unverified",
+    "estimand": "Descriptive paired event counts against user-supplied unverified references; not population quality",
+    "normal_scope": "successful fully decoded clips with empty user-supplied references; reference completeness unverified",
+    "limits": [
+      "User-supplied references and source groups are unverified; not independent sampling proof.",
+      "Raw stillness cannot distinguish an intentional still shot from a defect.",
+      "Frozen cut guard can suppress real flashes near a cut; those misses remain counted.",
+      "Failed clips remain in planned denominator and are excluded from conditional event metrics.",
+      "The v2 matching protocol differs from v1 greedy matching; historical scores must not be merged."
+    ]
+  },
+  "test_data_note": "The user_data branch probe copies a small controlled fixture and changes its nature declaration; it is a branch test, not a new natural-data or human study.",
+  "new_human_ratings": 0,
+  "model_calls": 0
+}

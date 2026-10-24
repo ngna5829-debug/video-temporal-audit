@@ -1,0 +1,1 @@
+12 timeline protocol assertions passed; browser playback/storage/export need separate UI verification.

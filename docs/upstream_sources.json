@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-10-23",
+  "primary_sources_browsed": [
+    {
+      "name": "VBench",
+      "url": "https://github.com/Vchitect/VBench",
+      "license": "Apache-2.0 repository code; model weights/datasets must be checked separately",
+      "license_url": "https://raw.githubusercontent.com/Vchitect/VBench/master/LICENSE",
+      "ref_read": "master",
+      "commit": null,
+      "commit_note": "GitHub commit API inaccessible in browser tool; immutable commit not captured",
+      "used_for": "Reading dimension-based video evaluation, separating model metrics from technical diagnostics",
+      "not_used": "No VBench code copied, weights downloaded or official scores executed"
+    },
+    {
+      "name": "VBench-2.0",
+      "url": "https://github.com/Vchitect/VBench/blob/master/VBench-2.0/README.md",
+      "license": "Repository Apache-2.0; dependencies/weights separate",
+      "ref_read": "master/VBench-2.0",
+      "commit": null,
+      "used_for": "Advanced evaluation route and higher-level ability boundaries",
+      "not_used": "No GPU pipeline or semantic evaluator run"
+    },
+    {
+      "name": "PySceneDetect",
+      "url": "https://github.com/Breakthrough/PySceneDetect",
+      "docs": "https://www.scenedetect.com/docs/latest/api/detectors.html",
+      "docs_version_observed": "0.7.1",
+      "license": "BSD-3-Clause",
+      "license_url": "https://raw.githubusercontent.com/Breakthrough/PySceneDetect/main/LICENSE",
+      "ref_read": "main",
+      "commit": null,
+      "commit_note": "GitHub commit API inaccessible in browser tool",
+      "used_for": "Reading the distinction between content changes, cuts and transitions; motivating cut-aware review",
+      "not_used": "Not installed or copied; project implements a simpler centered-luma rule, not ContentDetector"
+    },
+    {
+      "name": "FFmpeg showinfo and timing",
+      "url": "https://ffmpeg.org/ffmpeg-filters.html#showinfo",
+      "timing_url": "https://ffmpeg.org/ffmpeg.html",
+      "license": "LGPL-2.1-or-later core, GPL applies with enabled GPL components; actual binary license must be checked",
+      "license_url": "https://ffmpeg.org/legal.html",
+      "runtime_binary_version": "ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+      "used_for": "Same decoding pass source PTS, frame sizes, -copyts and fps_mode passthrough",
+      "not_used": "No claim that all malformed containers retain original camera timestamps",
+      "runtime_binary_license_observed": "GPL-2.0-or-later per actual ffmpeg -L"
+    },
+    {
+      "name": "imageio-ffmpeg",
+      "url": "https://github.com/imageio/imageio-ffmpeg",
+      "license": "BSD-2-Clause Python wrapper; FFmpeg binary has its separate license",
+      "version_used": "0.6.0",
+      "used_for": "Installed platform wheel binary locator; binary is not redistributed in this repository"
+    }
+  ],
+  "implementation": "Original teaching code under MIT; synthetic fixture geometry under CC0-1.0; no upstream code copied"
+}

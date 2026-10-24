@@ -1,0 +1,4557 @@
+{
+  "schema_version": 2,
+  "statistical_contract_version": "1.0",
+  "status": "completed",
+  "evaluator_version": "0.2.0",
+  "split": "test",
+  "dataset_sha256": "02b31ced56589423ee1c807fe1aa60ae648d32293a91eab94005e130bd8a7f75",
+  "data_origin": "controlled_fixture",
+  "reference_origin": "constructed_truth",
+  "analysis_unit": "source_group",
+  "sampling_frame": "fixed_benchmark",
+  "estimand": "Descriptive paired event counts on this inspected controlled regression suite; not population quality",
+  "n_planned": 20,
+  "n_attempted": 20,
+  "n_valid": 20,
+  "n_scored": 20,
+  "n_independent_groups_declared": 4,
+  "planned_source_groups": [
+    "test_challenge_1",
+    "test_challenge_2",
+    "test_source_1",
+    "test_source_2"
+  ],
+  "fully_scored_groups": [
+    "test_challenge_1",
+    "test_challenge_2",
+    "test_source_1",
+    "test_source_2"
+  ],
+  "clip_status": [
+    {
+      "clip_id": "test_source_1_normal",
+      "source_group": "test_source_1",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_source_1_freeze",
+      "source_group": "test_source_1",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_source_1_flicker",
+      "source_group": "test_source_1",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_source_1_cut",
+      "source_group": "test_source_1",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_source_2_normal",
+      "source_group": "test_source_2",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_source_2_freeze",
+      "source_group": "test_source_2",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_source_2_flicker",
+      "source_group": "test_source_2",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_source_2_cut",
+      "source_group": "test_source_2",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_challenge_1_pan",
+      "source_group": "test_challenge_1",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_challenge_1_zoom",
+      "source_group": "test_challenge_1",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_challenge_1_low_texture_motion",
+      "source_group": "test_challenge_1",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_challenge_1_intentional_static",
+      "source_group": "test_challenge_1",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_challenge_1_fade",
+      "source_group": "test_challenge_1",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_challenge_1_cut_near_flash",
+      "source_group": "test_challenge_1",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_challenge_2_pan",
+      "source_group": "test_challenge_2",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_challenge_2_zoom",
+      "source_group": "test_challenge_2",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_challenge_2_low_texture_motion",
+      "source_group": "test_challenge_2",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_challenge_2_intentional_static",
+      "source_group": "test_challenge_2",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_challenge_2_fade",
+      "source_group": "test_challenge_2",
+      "status": "success"
+    },
+    {
+      "clip_id": "test_challenge_2_cut_near_flash",
+      "source_group": "test_challenge_2",
+      "status": "success"
+    }
+  ],
+  "exclusions_by_reason": {},
+  "config": {
+    "freeze_mae": 0.1,
+    "freeze_min_s": 0.4,
+    "brightness_jump": 20.0,
+    "cut_structure_mae": 10.0,
+    "cut_guard_s": 0.2,
+    "flash_merge_gap_s": 0.25,
+    "motion_max_corners": 180,
+    "motion_min_tracks": 10,
+    "motion_min_inliers": 8,
+    "motion_min_inlier_ratio": 0.55,
+    "motion_min_overlap": 0.6,
+    "motion_ransac_px": 2.0,
+    "motion_max_fb_error_px": 1.5
+  },
+  "config_digest": "370706e89eb8ac3dd89fa77fda97f8c3db0861b257e7e2c15fee294c44c11922",
+  "policy_digest": "370706e89eb8ac3dd89fa77fda97f8c3db0861b257e7e2c15fee294c44c11922",
+  "split_digest": "6ccf3f8343558a80cc005af69f94c7ffbd48b852836db07a06d951322ccce9bf",
+  "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+  "calibration_fingerprint": "cedd5272b6dde0019e2846527a03edcd6e33ee84be291044b1132ad98f910a5c",
+  "candidate_configuration_count": 2,
+  "policy_revision": "v2-exploratory-fixed-suite-1",
+  "test_inspection_count": 1,
+  "test_inspection_count_scope": "this execution; suite is development-inspected and not a blind held-out claim",
+  "uncertainty": {
+    "method": "none",
+    "scope": "descriptive",
+    "status": "insufficient_groups",
+    "interval": null,
+    "resampling_unit": "source_group",
+    "n_resamples": 0,
+    "seed": null
+  },
+  "ablation": {
+    "original_rule": {
+      "tp": 8,
+      "fp": 26,
+      "fn": 2,
+      "precision": 0.23529411764705882,
+      "recall": 0.8,
+      "f1": 0.36363636363636365,
+      "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+      "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+      "denominators": {
+        "predicted_events": 34,
+        "reference_events": 10,
+        "f1_weighted_count": 44
+      },
+      "temporal_iou_threshold": 0.3,
+      "by_type": {
+        "freeze_candidate": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "denominators": {
+            "predicted_events": 4,
+            "reference_events": 2
+          },
+          "undefined_reasons": {
+            "precision": null,
+            "recall": null
+          }
+        },
+        "brightness_jump": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.5,
+          "recall": 0.5,
+          "denominators": {
+            "predicted_events": 4,
+            "reference_events": 4
+          },
+          "undefined_reasons": {
+            "precision": null,
+            "recall": null
+          }
+        },
+        "shot_cut_candidate": {
+          "tp": 4,
+          "fp": 22,
+          "fn": 0,
+          "precision": 0.15384615384615385,
+          "recall": 1.0,
+          "denominators": {
+            "predicted_events": 26,
+            "reference_events": 4
+          },
+          "undefined_reasons": {
+            "precision": null,
+            "recall": null
+          }
+        }
+      },
+      "clips": [
+        {
+          "clip_id": "test_source_1_normal",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_source_1_freeze",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999996923076925
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_1_flicker",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.6666666666666661
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_1_cut",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999959999999994
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_2_normal",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_source_2_freeze",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999996923076925
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_2_flicker",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.6666666666666661
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_2_cut",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999959999999994
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_challenge_1_pan",
+          "tp": 0,
+          "fp": 11,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_1_zoom",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_1_low_texture_motion",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_1_intentional_static",
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_1_fade",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_1_cut_near_flash",
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999959999999994
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 0.5,
+          "recall": 0.5
+        },
+        {
+          "clip_id": "test_challenge_2_pan",
+          "tp": 0,
+          "fp": 11,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_2_zoom",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_2_low_texture_motion",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_2_intentional_static",
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_2_fade",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_2_cut_near_flash",
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999959999999994
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 0.5,
+          "recall": 0.5
+        }
+      ],
+      "by_source_group": {
+        "test_challenge_1": {
+          "tp": 1,
+          "fp": 13,
+          "fn": 1,
+          "precision": 0.07142857142857142,
+          "recall": 0.5,
+          "f1": 0.125,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 14,
+            "reference_events": 2,
+            "f1_weighted_count": 16
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.0,
+              "recall": 0.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 1,
+              "fp": 11,
+              "fn": 0,
+              "precision": 0.08333333333333333,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 12,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_1_pan",
+              "tp": 0,
+              "fp": 11,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.0,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_1_zoom",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_1_low_texture_motion",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_1_intentional_static",
+              "tp": 0,
+              "fp": 1,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.0,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_1_fade",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_1_cut_near_flash",
+              "tp": 1,
+              "fp": 1,
+              "fn": 1,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.5,
+              "recall": 0.5
+            }
+          ],
+          "planned_clips": 6,
+          "scored_clips": 6
+        },
+        "test_challenge_2": {
+          "tp": 1,
+          "fp": 13,
+          "fn": 1,
+          "precision": 0.07142857142857142,
+          "recall": 0.5,
+          "f1": 0.125,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 14,
+            "reference_events": 2,
+            "f1_weighted_count": 16
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.0,
+              "recall": 0.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 1,
+              "fp": 11,
+              "fn": 0,
+              "precision": 0.08333333333333333,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 12,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_2_pan",
+              "tp": 0,
+              "fp": 11,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.0,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_zoom",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_low_texture_motion",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_intentional_static",
+              "tp": 0,
+              "fp": 1,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.0,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_fade",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_cut_near_flash",
+              "tp": 1,
+              "fp": 1,
+              "fn": 1,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.5,
+              "recall": 0.5
+            }
+          ],
+          "planned_clips": 6,
+          "scored_clips": 6
+        },
+        "test_source_1": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 3,
+            "reference_events": 3,
+            "f1_weighted_count": 6
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "brightness_jump": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_source_1_normal",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_source_1_freeze",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999996923076925
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "clip_id": "test_source_1_flicker",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.6666666666666661
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "clip_id": "test_source_1_cut",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            }
+          ],
+          "planned_clips": 4,
+          "scored_clips": 4
+        },
+        "test_source_2": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 3,
+            "reference_events": 3,
+            "f1_weighted_count": 6
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "brightness_jump": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_source_2_normal",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_source_2_freeze",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999996923076925
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "clip_id": "test_source_2_flicker",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.6666666666666661
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "clip_id": "test_source_2_cut",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            }
+          ],
+          "planned_clips": 4,
+          "scored_clips": 4
+        }
+      },
+      "by_kind": {
+        "cut": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 2,
+            "reference_events": 2,
+            "f1_weighted_count": 4
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 2,
+                "reference_events": 2
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_source_1_cut",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "clip_id": "test_source_2_cut",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "cut_near_flash": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 4,
+            "reference_events": 4,
+            "f1_weighted_count": 8
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 2,
+              "fn": 2,
+              "precision": 0.0,
+              "recall": 0.0,
+              "denominators": {
+                "predicted_events": 2,
+                "reference_events": 2
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 2,
+                "reference_events": 2
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_1_cut_near_flash",
+              "tp": 1,
+              "fp": 1,
+              "fn": 1,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.5,
+              "recall": 0.5
+            },
+            {
+              "clip_id": "test_challenge_2_cut_near_flash",
+              "tp": 1,
+              "fp": 1,
+              "fn": 1,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.5,
+              "recall": 0.5
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "fade": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 0,
+            "reference_events": 0,
+            "f1_weighted_count": 0
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_1_fade",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_fade",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "flicker": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 2,
+            "reference_events": 2,
+            "f1_weighted_count": 4
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 2,
+                "reference_events": 2
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_source_1_flicker",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.6666666666666661
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "clip_id": "test_source_2_flicker",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.6666666666666661
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "freeze": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 2,
+            "reference_events": 2,
+            "f1_weighted_count": 4
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 2,
+                "reference_events": 2
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_source_1_freeze",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999996923076925
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "clip_id": "test_source_2_freeze",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999996923076925
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "intentional_static": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 2,
+            "reference_events": 0,
+            "f1_weighted_count": 2
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 2,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 2,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_1_intentional_static",
+              "tp": 0,
+              "fp": 1,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.0,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_intentional_static",
+              "tp": 0,
+              "fp": 1,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.0,
+              "recall": null
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "low_texture_motion": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 0,
+            "reference_events": 0,
+            "f1_weighted_count": 0
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_1_low_texture_motion",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_low_texture_motion",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "normal": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 0,
+            "reference_events": 0,
+            "f1_weighted_count": 0
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_source_1_normal",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_source_2_normal",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "pan": {
+          "tp": 0,
+          "fp": 22,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 22,
+            "reference_events": 0,
+            "f1_weighted_count": 22
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 22,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 22,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_1_pan",
+              "tp": 0,
+              "fp": 11,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.0,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_pan",
+              "tp": 0,
+              "fp": 11,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.0,
+              "recall": null
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "zoom": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 0,
+            "reference_events": 0,
+            "f1_weighted_count": 0
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_1_zoom",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_zoom",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        }
+      },
+      "normal_video_false_alerts": {
+        "alerted_videos": 4,
+        "normal_videos": 12,
+        "rate": 0.3333333333333333,
+        "false_alert_count": 24,
+        "audited_duration_s": 48.0000036,
+        "false_alerts_per_hour": 1799.99986500001,
+        "false_alert_union_duration_s": 9.8333363,
+        "false_alert_duration_rate": 0.20486115755207984,
+        "scope": "successful fully decoded clips with empty constructed defect truth; intentional stills included"
+      }
+    },
+    "motion_compensated_rule": {
+      "tp": 8,
+      "fp": 4,
+      "fn": 2,
+      "precision": 0.6666666666666666,
+      "recall": 0.8,
+      "f1": 0.7272727272727273,
+      "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+      "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+      "denominators": {
+        "predicted_events": 12,
+        "reference_events": 10,
+        "f1_weighted_count": 22
+      },
+      "temporal_iou_threshold": 0.3,
+      "by_type": {
+        "freeze_candidate": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "denominators": {
+            "predicted_events": 4,
+            "reference_events": 2
+          },
+          "undefined_reasons": {
+            "precision": null,
+            "recall": null
+          }
+        },
+        "brightness_jump": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.5,
+          "recall": 0.5,
+          "denominators": {
+            "predicted_events": 4,
+            "reference_events": 4
+          },
+          "undefined_reasons": {
+            "precision": null,
+            "recall": null
+          }
+        },
+        "shot_cut_candidate": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "denominators": {
+            "predicted_events": 4,
+            "reference_events": 4
+          },
+          "undefined_reasons": {
+            "precision": null,
+            "recall": null
+          }
+        }
+      },
+      "clips": [
+        {
+          "clip_id": "test_source_1_normal",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_source_1_freeze",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999996923076925
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_1_flicker",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.6666666666666661
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_1_cut",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999959999999994
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_2_normal",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_source_2_freeze",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999996923076925
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_2_flicker",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.6666666666666661
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_source_2_cut",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999959999999994
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "clip_id": "test_challenge_1_pan",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_1_zoom",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_1_low_texture_motion",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_1_intentional_static",
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_1_fade",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_1_cut_near_flash",
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999959999999994
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 0.5,
+          "recall": 0.5
+        },
+        {
+          "clip_id": "test_challenge_2_pan",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_2_zoom",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_2_low_texture_motion",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_2_intentional_static",
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_2_fade",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "matches": [],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": null,
+          "recall": null
+        },
+        {
+          "clip_id": "test_challenge_2_cut_near_flash",
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "matches": [
+            {
+              "prediction_index": 0,
+              "truth_index": 0,
+              "temporal_iou": 0.9999959999999994
+            }
+          ],
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "precision": 0.5,
+          "recall": 0.5
+        }
+      ],
+      "by_source_group": {
+        "test_challenge_1": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "f1": 0.4,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 3,
+            "reference_events": 2,
+            "f1_weighted_count": 5
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.0,
+              "recall": 0.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_1_pan",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_1_zoom",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_1_low_texture_motion",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_1_intentional_static",
+              "tp": 0,
+              "fp": 1,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.0,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_1_fade",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_1_cut_near_flash",
+              "tp": 1,
+              "fp": 1,
+              "fn": 1,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.5,
+              "recall": 0.5
+            }
+          ],
+          "planned_clips": 6,
+          "scored_clips": 6
+        },
+        "test_challenge_2": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "f1": 0.4,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 3,
+            "reference_events": 2,
+            "f1_weighted_count": 5
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.0,
+              "recall": 0.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_2_pan",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_zoom",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_low_texture_motion",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_intentional_static",
+              "tp": 0,
+              "fp": 1,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.0,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_fade",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_cut_near_flash",
+              "tp": 1,
+              "fp": 1,
+              "fn": 1,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.5,
+              "recall": 0.5
+            }
+          ],
+          "planned_clips": 6,
+          "scored_clips": 6
+        },
+        "test_source_1": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 3,
+            "reference_events": 3,
+            "f1_weighted_count": 6
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "brightness_jump": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_source_1_normal",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_source_1_freeze",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999996923076925
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "clip_id": "test_source_1_flicker",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.6666666666666661
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "clip_id": "test_source_1_cut",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            }
+          ],
+          "planned_clips": 4,
+          "scored_clips": 4
+        },
+        "test_source_2": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 3,
+            "reference_events": 3,
+            "f1_weighted_count": 6
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "brightness_jump": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 1,
+                "reference_events": 1
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_source_2_normal",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_source_2_freeze",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999996923076925
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "clip_id": "test_source_2_flicker",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.6666666666666661
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "clip_id": "test_source_2_cut",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            }
+          ],
+          "planned_clips": 4,
+          "scored_clips": 4
+        }
+      },
+      "by_kind": {
+        "cut": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 2,
+            "reference_events": 2,
+            "f1_weighted_count": 4
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 2,
+                "reference_events": 2
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_source_1_cut",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "clip_id": "test_source_2_cut",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "cut_near_flash": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 4,
+            "reference_events": 4,
+            "f1_weighted_count": 8
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 2,
+              "fn": 2,
+              "precision": 0.0,
+              "recall": 0.0,
+              "denominators": {
+                "predicted_events": 2,
+                "reference_events": 2
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 2,
+                "reference_events": 2
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_1_cut_near_flash",
+              "tp": 1,
+              "fp": 1,
+              "fn": 1,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.5,
+              "recall": 0.5
+            },
+            {
+              "clip_id": "test_challenge_2_cut_near_flash",
+              "tp": 1,
+              "fp": 1,
+              "fn": 1,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999959999999994
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.5,
+              "recall": 0.5
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "fade": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 0,
+            "reference_events": 0,
+            "f1_weighted_count": 0
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_1_fade",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_fade",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "flicker": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 2,
+            "reference_events": 2,
+            "f1_weighted_count": 4
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 2,
+                "reference_events": 2
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_source_1_flicker",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.6666666666666661
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "clip_id": "test_source_2_flicker",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.6666666666666661
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "freeze": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 2,
+            "reference_events": 2,
+            "f1_weighted_count": 4
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "denominators": {
+                "predicted_events": 2,
+                "reference_events": 2
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": null
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_source_1_freeze",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999996923076925
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "clip_id": "test_source_2_freeze",
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "matches": [
+                {
+                  "prediction_index": 0,
+                  "truth_index": 0,
+                  "temporal_iou": 0.9999996923076925
+                }
+              ],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 1.0,
+              "recall": 1.0
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "intentional_static": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 2,
+            "reference_events": 0,
+            "f1_weighted_count": 2
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 2,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 2,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": null,
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_1_intentional_static",
+              "tp": 0,
+              "fp": 1,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.0,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_intentional_static",
+              "tp": 0,
+              "fp": 1,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": 0.0,
+              "recall": null
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "low_texture_motion": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 0,
+            "reference_events": 0,
+            "f1_weighted_count": 0
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_1_low_texture_motion",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_low_texture_motion",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "normal": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 0,
+            "reference_events": 0,
+            "f1_weighted_count": 0
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_source_1_normal",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_source_2_normal",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "pan": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 0,
+            "reference_events": 0,
+            "f1_weighted_count": 0
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_1_pan",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_pan",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        },
+        "zoom": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "matching": "same-video, same-type; maximum cardinality, then maximum summed temporal IoU",
+          "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+          "denominators": {
+            "predicted_events": 0,
+            "reference_events": 0,
+            "f1_weighted_count": 0
+          },
+          "temporal_iou_threshold": 0.3,
+          "by_type": {
+            "freeze_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "brightness_jump": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            },
+            "shot_cut_candidate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "denominators": {
+                "predicted_events": 0,
+                "reference_events": 0
+              },
+              "undefined_reasons": {
+                "precision": "no_predicted_events",
+                "recall": "no_reference_events"
+              }
+            }
+          },
+          "clips": [
+            {
+              "clip_id": "test_challenge_1_zoom",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            },
+            {
+              "clip_id": "test_challenge_2_zoom",
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matches": [],
+              "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+              "precision": null,
+              "recall": null
+            }
+          ],
+          "planned_clips": 2,
+          "scored_clips": 2
+        }
+      },
+      "normal_video_false_alerts": {
+        "alerted_videos": 2,
+        "normal_videos": 12,
+        "rate": 0.16666666666666666,
+        "false_alert_count": 2,
+        "audited_duration_s": 48.0000036,
+        "false_alerts_per_hour": 149.99998875000085,
+        "false_alert_union_duration_s": 8.0000006,
+        "false_alert_duration_rate": 0.16666666666666666,
+        "scope": "successful fully decoded clips with empty constructed defect truth; intentional stills included"
+      }
+    }
+  },
+  "per_clip": [
+    {
+      "clip_id": "test_source_1_normal",
+      "source_group": "test_source_1",
+      "kind": "normal",
+      "reference_events": 0,
+      "duration_s": 4.0000003,
+      "is_normal_reference": true,
+      "original_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "motion_compensated_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "original_false_alert_duration_s": 0.0,
+      "new_false_alert_duration_s": 0.0,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 47,
+        "failed_pairs": 0,
+        "failure_rate": 0.0,
+        "status_counts": {
+          "ok": 47
+        }
+      }
+    },
+    {
+      "clip_id": "test_source_1_freeze",
+      "source_group": "test_source_1",
+      "kind": "freeze",
+      "reference_events": 1,
+      "duration_s": 4.0000003,
+      "is_normal_reference": false,
+      "original_rule": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.9999996923076925
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "motion_compensated_rule": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.9999996923076925
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "original_false_alert_duration_s": null,
+      "new_false_alert_duration_s": null,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 47,
+        "failed_pairs": 0,
+        "failure_rate": 0.0,
+        "status_counts": {
+          "ok": 47
+        }
+      }
+    },
+    {
+      "clip_id": "test_source_1_flicker",
+      "source_group": "test_source_1",
+      "kind": "flicker",
+      "reference_events": 1,
+      "duration_s": 4.0000003,
+      "is_normal_reference": false,
+      "original_rule": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.6666666666666661
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "motion_compensated_rule": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.6666666666666661
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "original_false_alert_duration_s": null,
+      "new_false_alert_duration_s": null,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 45,
+        "failed_pairs": 2,
+        "failure_rate": 0.0425531914893617,
+        "status_counts": {
+          "insufficient_tracks": 2,
+          "ok": 45
+        }
+      }
+    },
+    {
+      "clip_id": "test_source_1_cut",
+      "source_group": "test_source_1",
+      "kind": "cut",
+      "reference_events": 1,
+      "duration_s": 4.0000003,
+      "is_normal_reference": false,
+      "original_rule": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.9999959999999994
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "motion_compensated_rule": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.9999959999999994
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "original_false_alert_duration_s": null,
+      "new_false_alert_duration_s": null,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 46,
+        "failed_pairs": 1,
+        "failure_rate": 0.02127659574468085,
+        "status_counts": {
+          "insufficient_tracks": 1,
+          "ok": 46
+        }
+      }
+    },
+    {
+      "clip_id": "test_source_2_normal",
+      "source_group": "test_source_2",
+      "kind": "normal",
+      "reference_events": 0,
+      "duration_s": 4.0000003,
+      "is_normal_reference": true,
+      "original_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "motion_compensated_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "original_false_alert_duration_s": 0.0,
+      "new_false_alert_duration_s": 0.0,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 47,
+        "failed_pairs": 0,
+        "failure_rate": 0.0,
+        "status_counts": {
+          "ok": 47
+        }
+      }
+    },
+    {
+      "clip_id": "test_source_2_freeze",
+      "source_group": "test_source_2",
+      "kind": "freeze",
+      "reference_events": 1,
+      "duration_s": 4.0000003,
+      "is_normal_reference": false,
+      "original_rule": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.9999996923076925
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "motion_compensated_rule": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.9999996923076925
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "original_false_alert_duration_s": null,
+      "new_false_alert_duration_s": null,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 46,
+        "failed_pairs": 1,
+        "failure_rate": 0.02127659574468085,
+        "status_counts": {
+          "insufficient_tracks": 1,
+          "ok": 46
+        }
+      }
+    },
+    {
+      "clip_id": "test_source_2_flicker",
+      "source_group": "test_source_2",
+      "kind": "flicker",
+      "reference_events": 1,
+      "duration_s": 4.0000003,
+      "is_normal_reference": false,
+      "original_rule": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.6666666666666661
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "motion_compensated_rule": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.6666666666666661
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "original_false_alert_duration_s": null,
+      "new_false_alert_duration_s": null,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 45,
+        "failed_pairs": 2,
+        "failure_rate": 0.0425531914893617,
+        "status_counts": {
+          "insufficient_tracks": 2,
+          "ok": 45
+        }
+      }
+    },
+    {
+      "clip_id": "test_source_2_cut",
+      "source_group": "test_source_2",
+      "kind": "cut",
+      "reference_events": 1,
+      "duration_s": 4.0000003,
+      "is_normal_reference": false,
+      "original_rule": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.9999959999999994
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "motion_compensated_rule": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.9999959999999994
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "original_false_alert_duration_s": null,
+      "new_false_alert_duration_s": null,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 46,
+        "failed_pairs": 1,
+        "failure_rate": 0.02127659574468085,
+        "status_counts": {
+          "insufficient_tracks": 1,
+          "ok": 46
+        }
+      }
+    },
+    {
+      "clip_id": "test_challenge_1_pan",
+      "source_group": "test_challenge_1",
+      "kind": "pan",
+      "reference_events": 0,
+      "duration_s": 4.0000003,
+      "is_normal_reference": true,
+      "original_rule": {
+        "tp": 0,
+        "fp": 11,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 0.0,
+        "recall": null
+      },
+      "motion_compensated_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "original_false_alert_duration_s": 0.9166686999999996,
+      "new_false_alert_duration_s": 0.0,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 47,
+        "failed_pairs": 0,
+        "failure_rate": 0.0,
+        "status_counts": {
+          "ok": 47
+        }
+      }
+    },
+    {
+      "clip_id": "test_challenge_1_zoom",
+      "source_group": "test_challenge_1",
+      "kind": "zoom",
+      "reference_events": 0,
+      "duration_s": 4.0000003,
+      "is_normal_reference": true,
+      "original_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "motion_compensated_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "original_false_alert_duration_s": 0.0,
+      "new_false_alert_duration_s": 0.0,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 47,
+        "failed_pairs": 0,
+        "failure_rate": 0.0,
+        "status_counts": {
+          "ok": 47
+        }
+      }
+    },
+    {
+      "clip_id": "test_challenge_1_low_texture_motion",
+      "source_group": "test_challenge_1",
+      "kind": "low_texture_motion",
+      "reference_events": 0,
+      "duration_s": 4.0000003,
+      "is_normal_reference": true,
+      "original_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "motion_compensated_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "original_false_alert_duration_s": 0.0,
+      "new_false_alert_duration_s": 0.0,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 0,
+        "failed_pairs": 47,
+        "failure_rate": 1.0,
+        "status_counts": {
+          "insufficient_features": 47
+        }
+      }
+    },
+    {
+      "clip_id": "test_challenge_1_intentional_static",
+      "source_group": "test_challenge_1",
+      "kind": "intentional_static",
+      "reference_events": 0,
+      "duration_s": 4.0000003,
+      "is_normal_reference": true,
+      "original_rule": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 0.0,
+        "recall": null
+      },
+      "motion_compensated_rule": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 0.0,
+        "recall": null
+      },
+      "original_false_alert_duration_s": 4.0000003,
+      "new_false_alert_duration_s": 4.0000003,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 47,
+        "failed_pairs": 0,
+        "failure_rate": 0.0,
+        "status_counts": {
+          "ok": 47
+        }
+      }
+    },
+    {
+      "clip_id": "test_challenge_1_fade",
+      "source_group": "test_challenge_1",
+      "kind": "fade",
+      "reference_events": 0,
+      "duration_s": 4.0000003,
+      "is_normal_reference": true,
+      "original_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "motion_compensated_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "original_false_alert_duration_s": 0.0,
+      "new_false_alert_duration_s": 0.0,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 47,
+        "failed_pairs": 0,
+        "failure_rate": 0.0,
+        "status_counts": {
+          "ok": 47
+        }
+      }
+    },
+    {
+      "clip_id": "test_challenge_1_cut_near_flash",
+      "source_group": "test_challenge_1",
+      "kind": "cut_near_flash",
+      "reference_events": 2,
+      "duration_s": 4.0000003,
+      "is_normal_reference": false,
+      "original_rule": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.9999959999999994
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 0.5,
+        "recall": 0.5
+      },
+      "motion_compensated_rule": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.9999959999999994
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 0.5,
+        "recall": 0.5
+      },
+      "original_false_alert_duration_s": null,
+      "new_false_alert_duration_s": null,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 46,
+        "failed_pairs": 1,
+        "failure_rate": 0.02127659574468085,
+        "status_counts": {
+          "insufficient_tracks": 1,
+          "ok": 46
+        }
+      }
+    },
+    {
+      "clip_id": "test_challenge_2_pan",
+      "source_group": "test_challenge_2",
+      "kind": "pan",
+      "reference_events": 0,
+      "duration_s": 4.0000003,
+      "is_normal_reference": true,
+      "original_rule": {
+        "tp": 0,
+        "fp": 11,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 0.0,
+        "recall": null
+      },
+      "motion_compensated_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "original_false_alert_duration_s": 0.9166669999999999,
+      "new_false_alert_duration_s": 0.0,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 47,
+        "failed_pairs": 0,
+        "failure_rate": 0.0,
+        "status_counts": {
+          "ok": 47
+        }
+      }
+    },
+    {
+      "clip_id": "test_challenge_2_zoom",
+      "source_group": "test_challenge_2",
+      "kind": "zoom",
+      "reference_events": 0,
+      "duration_s": 4.0000003,
+      "is_normal_reference": true,
+      "original_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "motion_compensated_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "original_false_alert_duration_s": 0.0,
+      "new_false_alert_duration_s": 0.0,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 47,
+        "failed_pairs": 0,
+        "failure_rate": 0.0,
+        "status_counts": {
+          "ok": 47
+        }
+      }
+    },
+    {
+      "clip_id": "test_challenge_2_low_texture_motion",
+      "source_group": "test_challenge_2",
+      "kind": "low_texture_motion",
+      "reference_events": 0,
+      "duration_s": 4.0000003,
+      "is_normal_reference": true,
+      "original_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "motion_compensated_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "original_false_alert_duration_s": 0.0,
+      "new_false_alert_duration_s": 0.0,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 0,
+        "failed_pairs": 47,
+        "failure_rate": 1.0,
+        "status_counts": {
+          "insufficient_features": 47
+        }
+      }
+    },
+    {
+      "clip_id": "test_challenge_2_intentional_static",
+      "source_group": "test_challenge_2",
+      "kind": "intentional_static",
+      "reference_events": 0,
+      "duration_s": 4.0000003,
+      "is_normal_reference": true,
+      "original_rule": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 0.0,
+        "recall": null
+      },
+      "motion_compensated_rule": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 0.0,
+        "recall": null
+      },
+      "original_false_alert_duration_s": 4.0000003,
+      "new_false_alert_duration_s": 4.0000003,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 47,
+        "failed_pairs": 0,
+        "failure_rate": 0.0,
+        "status_counts": {
+          "ok": 47
+        }
+      }
+    },
+    {
+      "clip_id": "test_challenge_2_fade",
+      "source_group": "test_challenge_2",
+      "kind": "fade",
+      "reference_events": 0,
+      "duration_s": 4.0000003,
+      "is_normal_reference": true,
+      "original_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "motion_compensated_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": [],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": null,
+        "recall": null
+      },
+      "original_false_alert_duration_s": 0.0,
+      "new_false_alert_duration_s": 0.0,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 47,
+        "failed_pairs": 0,
+        "failure_rate": 0.0,
+        "status_counts": {
+          "ok": 47
+        }
+      }
+    },
+    {
+      "clip_id": "test_challenge_2_cut_near_flash",
+      "source_group": "test_challenge_2",
+      "kind": "cut_near_flash",
+      "reference_events": 2,
+      "duration_s": 4.0000003,
+      "is_normal_reference": false,
+      "original_rule": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.9999959999999994
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 0.5,
+        "recall": 0.5
+      },
+      "motion_compensated_rule": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "temporal_iou": 0.9999959999999994
+          }
+        ],
+        "matching_protocol": "max-cardinality-then-max-total-tiouv2",
+        "precision": 0.5,
+        "recall": 0.5
+      },
+      "original_false_alert_duration_s": null,
+      "new_false_alert_duration_s": null,
+      "motion": {
+        "attempted_pairs": 47,
+        "ok_pairs": 46,
+        "failed_pairs": 1,
+        "failure_rate": 0.02127659574468085,
+        "status_counts": {
+          "insufficient_tracks": 1,
+          "ok": 46
+        }
+      }
+    }
+  ],
+  "motion_estimation": {
+    "attempted_pairs": 940,
+    "failed_pairs": 103,
+    "failure_rate": 0.10957446808510639
+  },
+  "metric_definitions": {
+    "motion_failure_rate": {
+      "numerator": 103,
+      "denominator": 940,
+      "value": 0.10957446808510639
+    }
+  },
+  "comparison": "Identical videos, frozen thresholds and cut guard; motion off vs on. Not independently tuned best algorithms.",
+  "limits": [
+    "Controlled render families only; source groups declared, not independent sampling proof.",
+    "Raw stillness cannot distinguish an intentional still shot from a defect.",
+    "Frozen cut guard can suppress real flashes near a cut; those misses remain counted.",
+    "Failed clips remain in planned denominator and are excluded from conditional event metrics.",
+    "The v2 matching protocol differs from v1 greedy matching; historical scores must not be merged."
+  ]
+}

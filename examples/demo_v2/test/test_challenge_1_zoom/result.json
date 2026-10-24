@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "project_id": "video-temporal-audit",
+  "operation": "analyze",
+  "status": "completed",
+  "input_digest": "32b3702ae78b915ea8ea10d040689cd1f9a73cec224c744de4170534faa6883e",
+  "config_digest": "194d4474cae6463dfef77af17d8b692066c5b2b1dbef753e92617a12f3fccea7",
+  "evaluator_version": "0.2.0",
+  "artifacts": [
+    {
+      "path": "frames.csv",
+      "sha256": "04620642821878400cbef8ac6ed3f21c36cf2ba2995d7ed71819bc07ab0ac40d",
+      "type": "csv"
+    },
+    {
+      "path": "preview.mp4",
+      "sha256": "a108c7dd434d8adbdada9f462de894fd32d8ecce6f7c90c3ba27775a8f0cc600",
+      "type": "mp4"
+    },
+    {
+      "path": "report.json",
+      "sha256": "d2f279a70881449edab32b82401fe565941cc985b8edae229f09b179125a7c18",
+      "type": "json"
+    },
+    {
+      "path": "timeline.html",
+      "sha256": "2ecd059474d341f069f9af6cd408816d1180b067af5327f0131ae43db6314f2b",
+      "type": "html"
+    }
+  ],
+  "counts": {
+    "frames": 48,
+    "events": 0,
+    "reviewed": 0
+  },
+  "warnings": [
+    "程序完成与视频质量结论不同；候选仍需人工复核。"
+  ]
+}

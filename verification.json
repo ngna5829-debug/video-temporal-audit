@@ -1,0 +1,157 @@
+{
+  "project_id": "P2",
+  "project": "video-temporal-audit",
+  "verified_at": "2026-10-23",
+  "status": "passed_local_cpu",
+  "chapter_chinese_characters": 4610,
+  "environment": {
+    "python": "3.12.14",
+    "architecture": "arm64",
+    "platform": "Darwin",
+    "packages": {
+      "numpy": "2.3.5",
+      "Pillow": "12.3.0",
+      "imageio": "2.37.0",
+      "imageio-ffmpeg": "0.6.0"
+    },
+    "interpreter_source": "existing work/model-validation-env, not newly installed into project .venv"
+  },
+  "commands": [
+    "python -m video_temporal_audit demo --output examples/reference_run",
+    "python -m unittest discover -s tests -v",
+    "python -m video_temporal_audit analyze --video [original book controlled MP4] --config examples/reference_run/calibration/config.json --output examples/external_input_check"
+  ],
+  "unit_and_integration_tests": {
+    "methods": 23,
+    "exit_code": 0,
+    "rerun_from_copy_with_spaces": true,
+    "evidence": "examples/reference_run/tests_output.txt"
+  },
+  "fixtures": {
+    "encoded_mp4": 20,
+    "event_clips": 16,
+    "calibration_clips": 8,
+    "test_clips": 8,
+    "source_groups": 4,
+    "test_groups": 2,
+    "test_reference_events": 6,
+    "split_disjoint_by_group": true,
+    "group_variations": "trajectory speed/start/phase, object size/color and background",
+    "same_rendering_family_limit": true
+  },
+  "results": {
+    "baseline_no_cut_guard": {
+      "tp": 6,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571
+    },
+    "shot_aware": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "boundaries": {
+    "offset5": {
+      "frame_count": 48,
+      "first_pts": 5.0,
+      "last_pts": 8.916667,
+      "last_duration_source": "median_delta_ESTIMATE"
+    },
+    "vfr": {
+      "frame_count": 48,
+      "first_pts": 0.0,
+      "last_pts": 5.833333,
+      "last_duration_source": "median_delta_ESTIMATE",
+      "distinct_positive_deltas": [
+        0.0833,
+        0.1666,
+        0.1667
+      ]
+    },
+    "single_frame": {
+      "frame_count": 1,
+      "first_pts": 0.0,
+      "last_pts": 0.0,
+      "last_duration_source": "showinfo_duration"
+    }
+  },
+  "intentional_static_challenge": {
+    "freeze_candidates": 1,
+    "interpretation": "Intentional stillness is flagged; do not equate a candidate with a defect"
+  },
+  "external_input": {
+    "source_kind": "original book program-drawn controlled MP4; not generated model output",
+    "frames": 36,
+    "events": 0,
+    "output": "examples/external_input_check"
+  },
+  "output_checks": {
+    "strict_json_no_nan_infinity": true,
+    "no_absolute_machine_paths_in_example_json": true,
+    "all_html_evidence_files_exist": true,
+    "pyproject_toml_parse": true,
+    "python_sources_compile": true,
+    "evidence_contact_visually_inspected": true,
+    "html_browser_rendered": false
+  },
+  "development_correction": "Initial short VFR fixture decoded7/8 because MP4 edit-list display range excluded final sample; fixture encoder now uses -use_editlist0 and -bf0; actual decoder continues respecting source container semantics.8-frame VFR test passed.",
+  "actual_model_calls": 0,
+  "actual_human_rater_study": false,
+  "github_remote_created": false,
+  "github_actions_executed": false,
+  "linux_execution_verified": false,
+  "limits": [
+    "6 simple injected events across2 test source groups, not production performance",
+    "Candidate flags do not prove identity or physical correctness",
+    "Final frame duration may use recorded median-delta estimate",
+    "No VBench/PySceneDetect model code or weights executed",
+    "Existing Python environment used; fresh dependency install not repeated"
+  ],
+  "code_sha256": {
+    "video_temporal_audit/__init__.py": "fcdddd38285d6036caa4f1df78f638ea1d4e8761c5403ad4d6602691fbf6dbed",
+    "video_temporal_audit/__main__.py": "5b8a0fe64dda4f201b25a6f95f3fb70f7ab16f735a551276ea49e0c75a867cdd",
+    "video_temporal_audit/core.py": "9a24b9c63dd9ebf4d53a3f2984ae13c19559c6e41afd64b756dc4044dfa4f68d",
+    "video_temporal_audit/evaluation.py": "bd3b2eab829dec7c405514d1f97ddb92061913738682154d1868ece066162d09",
+    "video_temporal_audit/fixtures.py": "e3e98a20a911bd8aca02594da10b7e4b24ee075a2af0d565690bccde035a088d",
+    "video_temporal_audit/media.py": "9ffbc52ab84905eed33dc9b38561a2c35b0dd5f9aa1c58c90595ae5e5b2be8b6",
+    "video_temporal_audit/report.py": "ee80165cd9da2cbee66efd90ee678caff41f5df079ab1360a0ccde70a7e54400"
+  },
+  "project_version": "0.1.1",
+  "calibration_integrity": {
+    "artifact_schema": "video-temporal-audit-calibration-v1",
+    "version_checked": true,
+    "thresholds_and_metadata_digest_checked": true,
+    "calibration_media_sha_and_truth_fingerprint_checked": true,
+    "changed_calibration_media_with_updated_manifest_sha_rejected": true,
+    "changed_calibration_truth_rejected": true,
+    "changed_threshold_with_stale_digest_rejected": true,
+    "same_media_bytes_renamed_across_groups_rejected": true,
+    "unsafe_clip_id_rejected": true,
+    "new_test_clip_preserves_calibration_binding": true,
+    "scope": "Checks ordinary stale-file/configuration mixing; not malicious simultaneous rewriting of all artifacts",
+    "config_digest": "f729e391a3dc0468a2ce59474cd2ec6d99be550043d41146db949ac59bb0ee8e",
+    "calibration_fingerprint": "cedd5272b6dde0019e2846527a03edcd6e33ee84be291044b1132ad98f910a5c"
+  },
+  "truth_timeline_validation": {
+    "in_calibrate_and_evaluate": true,
+    "time_basis": "decoded source PTS seconds",
+    "rounding_tolerance_s": 1e-05,
+    "four_second_video_hundred_second_label_rejected": true,
+    "five_second_start_player_relative_zero_label_rejected": true,
+    "source_interval_edges_and_small_rounding_accepted": true,
+    "no_final_metrics_after_invalid_test_truth": true,
+    "endpoint_limit": "Last frame may use explicitly recorded median-delta estimate, not guaranteed exact container endpoint"
+  },
+  "development_corrections": [
+    "Initial short VFR fixture decoded7/8 because MP4 edit-list display range excluded final sample; fixture encoder now uses -use_editlist0 and -bf0; actual decoder continues respecting source container semantics.8-frame VFR test passed.",
+    "Independent review found missing calibration/config binding; fixed artifact digest and calibration-only fingerprint with counterexamples.",
+    "Independent review found truth intervals could exceed source timeline; fixed both calibration and evaluation with three boundary tests."
+  ]
+}

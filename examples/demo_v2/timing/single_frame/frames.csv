@@ -1,0 +1,2 @@
+﻿source_index,source_pts_s,relative_pts_s,duration_s,luma_proxy,mae,structure_mae,brightness_delta,motion_status,motion_tracks,motion_inliers,motion_inlier_ratio,motion_overlap,motion_dx,motion_dy,motion_scale,motion_compensated_structure_mae
+0,0.0,0.0,0.0833333,64.8017349243164,0.0,0.0,0.0,first_frame,0,0,0.0,0.0,,,,

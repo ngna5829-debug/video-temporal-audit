@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict');
+const {reviewBinding,validateReviewRows,sourceToPlayback}=require('../video_temporal_audit/timeline.js');
+const report={clip_id:'offset',input_sha256:'media-sha',config_digest:'config-sha',report_digest:'events-sha',events:[{event_id:'E001'}]};
+const row={...reviewBinding(report),event_id:'E001',decision:'intentional',evidence:'Test fixture only; intentional stillness.'};
+assert.equal(sourceToPlayback(7,5),2);
+assert.deepEqual(validateReviewRows([row],report),[row]);
+for(const field of ['clip_id','media_sha','config_digest','report_digest','event_id'])assert.throws(()=>validateReviewRows([{...row,[field]:'wrong'}],report));
+assert.throws(()=>validateReviewRows([{...row,evidence:''}],report));
+assert.throws(()=>validateReviewRows([row,row],report));
+assert.throws(()=>validateReviewRows([],report));
+assert.throws(()=>validateReviewRows([{...row,decision:'accepted'}],report));
+assert.throws(()=>validateReviewRows([{...row,unexpected:'field'}],report));
+console.log('12 timeline protocol assertions passed; browser playback/storage/export need separate UI verification.');

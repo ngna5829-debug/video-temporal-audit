@@ -1,0 +1,543 @@
+{
+  "schema_version": 1,
+  "evaluator_version": "0.1.1",
+  "config": {
+    "freeze_mae": 0.1,
+    "freeze_min_s": 0.4,
+    "brightness_jump": 20.0,
+    "cut_structure_mae": 10.0,
+    "cut_guard_s": 0.2,
+    "flash_merge_gap_s": 0.25
+  },
+  "selection_split": "calibration",
+  "selection_metric": "event micro F1 at tIoU>=0.3",
+  "selected_trial_index": 0,
+  "trials": [
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 20.0,
+        "cut_structure_mae": 10.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 20.0,
+        "cut_structure_mae": 20.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 20.0,
+        "cut_structure_mae": 30.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 35.0,
+        "cut_structure_mae": 10.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 35.0,
+        "cut_structure_mae": 20.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 35.0,
+        "cut_structure_mae": 30.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 50.0,
+        "cut_structure_mae": 10.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 50.0,
+        "cut_structure_mae": 20.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 50.0,
+        "cut_structure_mae": 30.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 20.0,
+        "cut_structure_mae": 10.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 20.0,
+        "cut_structure_mae": 20.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 20.0,
+        "cut_structure_mae": 30.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 35.0,
+        "cut_structure_mae": 10.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 35.0,
+        "cut_structure_mae": 20.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 35.0,
+        "cut_structure_mae": 30.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 50.0,
+        "cut_structure_mae": 10.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 50.0,
+        "cut_structure_mae": 20.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.1,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 50.0,
+        "cut_structure_mae": 30.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 20.0,
+        "cut_structure_mae": 10.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 20.0,
+        "cut_structure_mae": 20.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 20.0,
+        "cut_structure_mae": 30.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 35.0,
+        "cut_structure_mae": 10.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 35.0,
+        "cut_structure_mae": 20.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 35.0,
+        "cut_structure_mae": 30.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 50.0,
+        "cut_structure_mae": 10.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 50.0,
+        "cut_structure_mae": 20.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.4,
+        "brightness_jump": 50.0,
+        "cut_structure_mae": 30.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 20.0,
+        "cut_structure_mae": 10.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 20.0,
+        "cut_structure_mae": 20.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 20.0,
+        "cut_structure_mae": 30.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 35.0,
+        "cut_structure_mae": 10.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 35.0,
+        "cut_structure_mae": 20.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 35.0,
+        "cut_structure_mae": 30.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 50.0,
+        "cut_structure_mae": 10.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 50.0,
+        "cut_structure_mae": 20.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "config": {
+        "freeze_mae": 0.3,
+        "freeze_min_s": 0.6,
+        "brightness_jump": 50.0,
+        "cut_structure_mae": 30.0,
+        "cut_guard_s": 0.2,
+        "flash_merge_gap_s": 0.25
+      },
+      "f1": 0.8571428571428571,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0
+    }
+  ],
+  "clip_ids": [
+    "calibration_source_1_normal",
+    "calibration_source_1_freeze",
+    "calibration_source_1_flicker",
+    "calibration_source_1_cut",
+    "calibration_source_2_normal",
+    "calibration_source_2_freeze",
+    "calibration_source_2_flicker",
+    "calibration_source_2_cut"
+  ],
+  "source_groups": [
+    "calibration_source_1",
+    "calibration_source_2"
+  ],
+  "dataset_sha256": "316d21dfc2d5966719e6f6c55eae6f27cfcd1f8de42ac306a49b2e055456b146",
+  "calibration_fingerprint": "cedd5272b6dde0019e2846527a03edcd6e33ee84be291044b1132ad98f910a5c",
+  "config_digest": "f729e391a3dc0468a2ce59474cd2ec6d99be550043d41146db949ac59bb0ee8e",
+  "test_features_or_scores_used_for_selection": false,
+  "limits": [
+    "Two calibration source groups, controlled rendering family only",
+    "Grid search is not external validation"
+  ]
+}
