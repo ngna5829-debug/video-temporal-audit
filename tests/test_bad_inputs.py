@@ -84,7 +84,26 @@ class ActualMediaBoundaries(unittest.TestCase):
                         "-vf", "setpts=PTS-2/TB", "-fps_mode", "passthrough", "-c:v", "libx264",
                         "-enc_time_base", "1:90000", "-bf", "0", "-avoid_negative_ts", "disabled",
                         "-mpegts_copyts", "1", str(source)], check=True, capture_output=True)
-        report, _ = analyze_video(source, self.root/"negative_report", DEFAULT_CONFIG)
+        try:
+            report, _ = analyze_video(source, self.root/"negative_report", DEFAULT_CONFIG)
+        except ValueError as error:
+            # Preserve the real cross-platform failure instead of skipping this
+            # boundary. Production errors omit paths; these generated fixtures
+            # can safely expose FFmpeg's diagnostic output in a failing test.
+            version = subprocess.run([self.ffmpeg, "-version"], capture_output=True,
+                                     text=True, timeout=30)
+            command = [self.ffmpeg, "-y", "-hide_banner", "-copyts", "-i", str(source),
+                       "-map", "0:v:0", "-vf", "showinfo", "-an", "-frames:v", "1201",
+                       "-fps_mode", "passthrough"]
+            png = subprocess.run(command+[str(self.root/"negative_diagnostic_%06d.png")],
+                                 capture_output=True, text=True, timeout=30)
+            null = subprocess.run(command+["-f", "null", "-"],
+                                  capture_output=True, text=True, timeout=30)
+            self.fail(f"Negative PTS analysis failed: {error}\n"
+                      f"Fixture bytes={source.stat().st_size}; sha256={sha256(source)}\n"
+                      f"FFmpeg version:\n{version.stdout}\n"
+                      f"Same-pass PNG exit={png.returncode}:\n{png.stderr}\n"
+                      f"Null output decode exit={null.returncode}:\n{null.stderr}")
         self.assertEqual(report["source_start_s"], -2.)
         self.assertEqual(report["relative_pts_s"][0], 0.)
         self.assertEqual(len(report["source_pts_s"]), 8)
